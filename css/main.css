@@ -1,0 +1,13 @@
+* {
+  transition: all 1.2s ease;
+}
+
+.header {
+  color: black;
+}
+
+#navbar {
+  background-color: grey;
+  width: 100%;
+  height: 8rem;
+}
