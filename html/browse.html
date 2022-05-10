@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Browse</title>
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/browse.css">
   <link rel="stylesheet" href="../css/general.css">
+  <script src = "../js/main.js"></script>
   <script src="https://kit.fontawesome.com/c57e250b16.js" crossorigin="anonymous"></script>
 </head>
 
@@ -17,13 +18,13 @@
     <a href="index.html"><img src="../assets/ggIcon.webp" alt="GasGamesIcon" class = "ggIcon"></a>
     <div class = "navIconCont">
       <i class="fa-solid fa-magnifying-glass navIcon"></i>
-      <i class="fa-solid fa-user-astronaut navIcon"></i>
-      <i class="fa-solid fa-cart-shopping navIcon"></i>
+      <i class="fa-solid fa-user-astronaut navIcon" onclick="showPopup('login')"></i>
+      <i class="fa-solid fa-cart-shopping navIcon" onclick="showPopup('cart')"></i>
     </div>
   </nav>
   <div id = "browseImageCont">
     <div class = "browseImage">
-      <a href = "index.html">
+      <a href = "categoryHomes/gamesHome.html">
         <img src="../assets/Catan.jpeg" alt="games">
         <div>
           <h2 class = "subHeader">G</h2>
@@ -35,7 +36,7 @@
       </a>
     </div>
     <div class = "browseImage">
-      <a href = "index.html">
+      <a href = "categoryHomes/puzzlesHome.html">
         <img src="../assets/puzzles.jpeg" alt="puzzles">
         <div>
           <h2 class = "subHeader">P</h2>
@@ -49,7 +50,7 @@
       </a>
     </div>
     <div class = "browseImage">
-      <a href = "index.html">
+      <a href = "categoryHomes/RPGHome.html">
         <img src="../assets/RPG.png" alt="RPG">
         <div>
           <h2 class = "subHeader">R</h2>
@@ -59,7 +60,7 @@
       </a>
     </div>
     <div class = "browseImage">
-      <a href = "index.html">
+      <a href = "categoryHomes/CCGHome.html">
         <img src="../assets/CCG.png" alt="CCG">
         <div>
           <h2 class = "subHeader">C</h2>
@@ -69,7 +70,7 @@
       </a>
     </div>
     <div class = "browseImage">
-      <a href = "index.html">
+      <a href = "categoryHomes/materialsHome.html">
         <img src="../assets/materials.jpeg" alt="materials">
         <div>
           <h2 class = "subHeader">M</h2>
@@ -85,7 +86,7 @@
       </a>
     </div>
     <div class = "browseImage">
-      <a href = "index.html">
+      <a href = "categoryHomes/collectablesHome.html">
         <img src="../assets/jewellery.webp" alt="collectables">
         <div>
           <h2 class = "subHeader">C</h2>
@@ -103,6 +104,20 @@
         </div>
       </a>
     </div>
+  </div>
+  <div id = "login">
+    <div class = backBanner onclick = "closePopup('login')">
+      <i class="fa-solid fa-chevron-left popupArrow"></i>
+      <h3>Continue shopping</h3>
+    </div>
+    <h2 class = "popupHeader">Login</h2>
+  </div>
+  <div id = "cart">
+    <div class = backBanner onclick = "closePopup('cart')">
+      <i class="fa-solid fa-chevron-left popupArrow"></i>
+      <h3>Continue shopping</h3>
+    </div>
+    <h2 class = "popupHeader">Cart</h2>
   </div>
 </body>
 </html>

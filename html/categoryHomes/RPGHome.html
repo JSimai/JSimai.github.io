@@ -4,16 +4,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inspo</title>
-  <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/general.css">
-  <link rel="stylesheet" href="../css/inspo.css">
-  <script src = "../js/main.js"></script>
+  <title>RPG Home</title>
+  <link rel="stylesheet" href="../../css/reset.css">
+  <link rel="stylesheet" href="../../css/categoryHome.css">
+  <link rel="stylesheet" href="../../css/general.css">
+  <script src = "../../js/main.js"></script>
   <script src="https://kit.fontawesome.com/c57e250b16.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <nav id = "navbar">
-    <a href="index.html"><img src="../assets/ggIcon.webp" alt="GasGamesIcon" class = "ggIcon"></a>
+    <a href="../index.html"><img src="../../assets/ggIcon.webp" alt="GasGamesIcon" class = "ggIcon"></a>
     <div class = "navIconCont">
       <i class="fa-solid fa-magnifying-glass navIcon"></i>
       <i class="fa-solid fa-user-astronaut navIcon" onclick="showPopup('login')"></i>
@@ -21,26 +21,33 @@
     </div>
   </nav>
   <div id = "navMenu">
-    <a href="browse.html" class = "browseMenu">
-      <h2>Browse</h2>
-      <i class="fa-solid fa-chevron-left arrow"></i>
-    </a>
+    <a href="../browse.html" class = "browseMenu"><h2>Browse</h2><i class="fa-solid fa-chevron-left arrow"></i></a>
     <div class = "hoverMenu">
-      <a href="./categoryHomes/gamesHome.html"><h2>Games</h2></a>
-      <a href="./categoryHomes/puzzlesHome.html"><h2>Puzzles</h2></a>
-      <a href="./categoryHomes/RPGHome.html"><h2>RPG</h2></a>
-      <a href="./categoryHomes/CCGHome.html"><h2>CCG</h2></a>
-      <a href="./categoryHomes/materialsHome.html"><h2>Materials</h2></a>
-      <a href="./categoryHomes/collectablesHome.html"><h2>Collectables</h2></a>
+      <a href="gamesHome.html"><h2>Games</h2></a>
+      <a href="puzzlesHome.html"><h2>Puzzles</h2></a>
+      <a href="RPGHome.html"><h2>RPG</h2></a>
+      <a href="CCGHome.html"><h2>CCG</h2></a>
+      <a href="materialsHome.html"><h2>Materials</h2></a>
+      <a href="collectablesHome.html"><h2>Collectables</h2></a>
     </div>
-    <a><h2>Find Inspo</h2></a>
+    <a href="../inspo.html"><h2>Find Inspo</h2></a>
     <a><h2>Publishers</h2></a>
     <a><h2>About Us</h2></a>
     <a><h2>Contact</h2></a>
   </div>
-  <h1 class = "title">FIND INSPO</h1>
-  <img src="../assets/inspo.jpg" alt="inspo" class = "navImg">
+  <h1 class = "title">RPG</h1>
+  <img src="../../assets/RPG.png" alt="RPG" class = "navImg">
+  <!-- Grey Overlay -->
   <div class = "navImg"></div>
+
+  <div id = "catNavMenu">
+    <a><h2>All RPG</h2></a>
+    <a><h2>D & D</h2></a>
+    <a><h2>Starfinder</h2></a>
+    <a><h2>Models</h2></a>
+    <a><h2>Guides</h2></a>
+  </div>
+
   <div id = "login">
     <div class = backBanner onclick = "closePopup('login')">
       <i class="fa-solid fa-chevron-left popupArrow"></i>
@@ -54,6 +61,10 @@
       <h3>Continue shopping</h3>
     </div>
     <h2 class = "popupHeader">Cart</h2>
+  </div>
+
+  <div id = "content">
+
   </div>
 </body>
 </html>
