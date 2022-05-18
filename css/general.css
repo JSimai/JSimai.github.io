@@ -37,11 +37,38 @@ h3 {
   width: 100%;
   border-bottom: 2px solid white;
   cursor: pointer;
+  justify-content: space-between;
 }
+/* 
+.backBanner:hover {
+  border-bottom: 2px solid #EA9F1C;
+  color: #EA9F1C;
+} */
 
 .browseMenu:hover + .hoverMenu{
   visibility: visible;
   opacity: 1;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: 0 solid white;
+  background: #EA9F1C;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: myRegularFont;
+}
+
+.btn:hover {
+  color: #EA9F1C;
+  background: #fff;
+  transform: scale(0.95);
 }
 
 #cart {
@@ -49,7 +76,7 @@ h3 {
   top: 0;
   right: 0;
   height: 100vh;
-  width: 20rem;
+  width: 23rem;
   background-color: #3f3f3f;
   box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.6);
   transform: translateX(200%);
@@ -76,6 +103,46 @@ h3 {
   font-family: myRegularFont;
   text-decoration: none;
   margin-right: 2.8rem;
+}
+
+.cartCont {
+  padding: 2rem;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.contShop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: center; */
+  /* background-color: #3f3f3f; */
+  /* padding-top: 2rem; */
+}
+
+.extraOption {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid white;
+  color: #fff;
+  font-family: myRegularFont;
+  font-size: 1.2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .ggIcon {
@@ -115,12 +182,57 @@ h3 {
   opacity: 1;
 }
 
+.input {
+  width: 80%;
+  height: 1rem;
+  border: 0px solid white;
+  border-bottom: 1px solid white;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-family: myRegularFont;
+  color: white;
+  background-color: #3f3f3f;
+}
+
+.itemImage {
+  height: 6rem;
+  width: auto
+}
+
+.itemInfo {
+  margin-left: 1rem;
+}
+
+.itemName {
+  font-size: 1.1rem;
+  font-family: myRegularFont;
+  color: #EA9F1C;
+  width: 80%;
+  /* margin-top: 0.5rem; */
+}
+
+.itemPrice {
+  font-size: 1.4rem;
+  font-family: myBoldFont;
+  color: white;
+}
+
+.line {
+  width: 150%;
+  height: 2px;
+  margin-left: -2rem;
+  /* margin-right: -2rem; */
+  background-color: white;
+  margin-top: 2rem;
+}
+
 #login {
   position: absolute;
   top: 0;
   right: 0;
   height: 100vh;
-  width: 20rem;
+  width: 23rem;
   background-color: #3f3f3f;
   box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.6);
   transform: translateX(200%);
@@ -188,6 +300,14 @@ h3 {
   margin-right: 2.5rem;
 }
 
+.number {
+  color: white;
+  font-size: 1.2rem;
+  font-family: myBoldFont;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .popupArrow {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -197,9 +317,36 @@ h3 {
 
 .popupHeader {
   font-family: myBoldFont;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: white;
   z-index: 1;
+}
+
+.priceBundle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.quantity {
+  display: flex;
+  align-items: center;
+}
+
+.symbol {
+  color: white;
+  border: 2px solid white;
+  font-size: 1.2rem;
+  border-radius: 7px;
+  padding: 5px;
+}
+
+.symbol:hover {
+  cursor: pointer;
+  background-color: #EA9F1C;
+  border: 2px solid #EA9F1C;
+  transform: scale(0.95);
 }
 
 .title {
@@ -212,4 +359,40 @@ h3 {
   font-family: myRegularFont;
   letter-spacing: 4vw;
   margin-left: 4vw;
+}
+
+.total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.totalPrice {
+  font-family: myBoldFont;
+  font-size: 1.6rem;
+  color: white;
+  /* margin-left: 1rem; */
+}
+
+.whiteBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: myRegularFont;
+  margin-right: 1rem;
+}
+
+.whiteBtn:hover {
+  /* color: #EA9F1C; */
+  background: #EA9F1C;
+  transform: scale(0.95);
+  border: 2px solid #EA9F1C;
 }

@@ -13,7 +13,7 @@
 </head>
 <body>
   <nav id = "navbar">
-    <a href="../index.html"><img src="../../assets/ggIcon.webp" alt="GasGamesIcon" class = "ggIcon"></a>
+    <a href="../../index.html"><img src="../../assets/ggIcon.webp" alt="GasGamesIcon" class = "ggIcon"></a>
     <div class = "navIconCont">
       <i class="fa-solid fa-magnifying-glass navIcon"></i>
       <i class="fa-solid fa-user-astronaut navIcon" onclick="showPopup('login')"></i>
@@ -51,18 +51,87 @@
   </div>
 
   <div id = "login">
-    <div class = backBanner onclick = "closePopup('login')">
-      <i class="fa-solid fa-chevron-left popupArrow"></i>
-      <h3>Continue shopping</h3>
+    <div class = 'backBanner' onclick = "closePopup('login')">
+      <div class = "contShop">
+        <i class="fa-solid fa-chevron-left popupArrow"></i>
+        <h3>Continue shopping</h3>
+      </div>
     </div>
-    <h2 class = "popupHeader">Login</h2>
+    <div class="cartCont">
+      <h2 class = "popupHeader">Login or Register</h2>
+    </div>
+    <form class='form' onsubmit="handleForm()">
+      <input 
+        type="email" 
+        class="input"
+        placeholder="Email" 
+        name="email" 
+        autoComplete="on"
+        required/><br />
+      <input
+        type="password"
+        class="input"
+        name="password"
+        placeholder="Password"
+        password="true"
+        required
+      /><br />
+      <input
+        type="submit"
+        class="btn"
+        style="width: 50%; margin-top: 2rem;"
+        name="login"
+        value="Login/Register"
+        autoComplete="on"
+      /> 
+    </form>
   </div>
   <div id = "cart">
-    <div class = backBanner onclick = "closePopup('cart')">
-      <i class="fa-solid fa-chevron-left popupArrow"></i>
-      <h3>Continue shopping</h3>
+    <div class = "backBanner" onclick = "closePopup('cart')">
+      <div class = "contShop">
+        <i class="fa-solid fa-chevron-left popupArrow"></i>
+        <h3>Continue shopping</h3>
+      </div>
+      <a href="../index.html" class="whiteBtn"><h2>View Cart</h2></a>
     </div>
-    <h2 class = "popupHeader">Cart</h2>
+    <div class="cartCont">
+      <div class = "popupHeaderCont">
+        <h2 class = "popupHeader">My Order</h2>
+        <h3 style="margin-top: 0.7rem;" >Spend $60.00 more and get free shipping!</h3>
+      </div>
+      <div class="total">
+        <button class="btn" style="width: 40%;">
+          <h2>Checkout</h2>
+        </button>
+        <h2 class = "totalPrice">Total: $90.00</h2>
+      </div>
+      <div class="line"></div>
+      <div class="cartItem">
+        <img src="../../assets/catanProduct.webp" class="itemImage" alt="Catan">
+        <div class = "itemInfo">
+          <h2 class = "itemName">Settlers of Catan: Explorers and Pirates</h2>
+          <div class = "priceBundle">
+            <div class = "quantity">
+              <i class="fa-solid fa-minus symbol"></i>
+              <h2 class = "number">1</h2>
+              <i class="fa-solid fa-plus symbol"></i>
+            </div>
+            <h2 class = "itemPrice">$90.00</h2>
+          </div>
+        </div>
+      </div>
+      <div class="line"></div>
+    </div>
+    <div>
+      <div class="extraOption">
+        <h2>Estimate Shipping</h2>
+        <i class="fa-solid fa-chevron-left"></i>
+      </div>
+      <div class="extraOption" style="padding-top: 2rem;">
+        <h2>Order Instructions</h2>
+        <i class="fa-solid fa-chevron-left"></i>
+      </div>
+    </div>
   </div>
 
   <div id = "content">
