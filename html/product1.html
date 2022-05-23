@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product 1</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/product.css">
+  <link rel="stylesheet" href="../css/general.css">
+  <script src = "../js/main.js"></script>
+  <script src="https://kit.fontawesome.com/c57e250b16.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="navBack">
+    <nav id = "navbar">
+      <a href="../../index.html"><img src="../../assets/ggIcon.webp" alt="GasGamesIcon" class = "ggIcon"></a>
+      <div class = "navIconCont">
+        <i class="fa-solid fa-magnifying-glass navIcon"></i>
+        <i class="fa-solid fa-user-astronaut navIcon" onclick="showPopup('login')"></i>
+        <i class="fa-solid fa-cart-shopping navIcon" onclick="showPopup('cart')"></i>
+      </div>
+    </nav>
+    <div id = "navMenu">
+      <a href="browse.html" class = "browseMenu">
+        <h2>Browse</h2>
+        <i class="fa-solid fa-chevron-left arrow"></i>
+      </a>
+      <div class = "hoverMenu">
+        <a href="categoryHomes/gamesHome.html"><h2>Games</h2></a>
+        <a href="categoryHomes/puzzlesHome.html"><h2>Puzzles</h2></a>
+        <a href="categoryHomes/RPGHome.html"><h2>RPG</h2></a>
+        <a href="categoryHomes/CCGHome.html"><h2>CCG</h2></a>
+        <a href="categoryHomes/materialsHome.html"><h2>Materials</h2></a>
+        <a href="categoryHomes/collectablesHome.html"><h2>Collectables</h2></a>
+      </div>
+      <a href="../inspo.html"><h2>Find Inspo</h2></a>
+      <a><h2>Publishers</h2></a>
+      <a><h2>About Us</h2></a>
+      <a><h2>Contact</h2></a>
+    </div>
+  </div>
+  <div id = "login">
+    <div class = 'backBanner' onclick = "closePopup('login')">
+      <div class = "contShop">
+        <i class="fa-solid fa-chevron-left popupArrow"></i>
+        <h3>Continue shopping</h3>
+      </div>
+    </div>
+    <div class="cartCont">
+      <h2 class = "popupHeader">Login or Register</h2>
+    </div>
+    <form class='form' onsubmit="handleForm()">
+      <input 
+        type="email" 
+        class="input"
+        placeholder="Email" 
+        name="email" 
+        autoComplete="on"
+        required/><br />
+      <input
+        type="password"
+        class="input"
+        name="password"
+        placeholder="Password"
+        password="true"
+        required
+      /><br />
+      <input
+        type="submit"
+        class="btn"
+        style="width: 50%; margin-top: 2rem;"
+        name="login"
+        value="Login/Register"
+        autoComplete="on"
+      /> 
+    </form>
+  </div>
+  <div id = "cart">
+    <div class = "backBanner" onclick = "closePopup('cart')">
+      <div class = "contShop">
+        <i class="fa-solid fa-chevron-left popupArrow"></i>
+        <h3>Continue shopping</h3>
+      </div>
+      <a href="../index.html" class="whiteBtn"><h2>View Cart</h2></a>
+    </div>
+    <div class="cartCont">
+      <div class = "popupHeaderCont">
+        <h2 class = "popupHeader">My Order</h2>
+        <h3 style="margin-top: 0.7rem;" >Spend $60.00 more and get free shipping!</h3>
+      </div>
+      <div class="total">
+        <button class="btn" style="width: 40%;">
+          <h2>Checkout</h2>
+        </button>
+        <h2 class = "totalPrice">Total: $90.00</h2>
+      </div>
+      <div class="line"></div>
+      <div class="cartItem">
+        <img src="../../assets/Product Images/catanProduct.webp" class="itemImage" alt="Catan">
+        <div class = "itemInfo">
+          <h2 class = "itemName">Settlers of Catan: Explorers and Pirates</h2>
+          <div class = "priceBundle">
+            <div class = "quantity">
+              <i class="fa-solid fa-minus symbol"></i>
+              <h2 class = "number">1</h2>
+              <i class="fa-solid fa-plus symbol"></i>
+            </div>
+            <h2 class = "itemPrice">$90.00</h2>
+          </div>
+        </div>
+      </div>
+      <div class="line"></div>
+    </div>
+    <div>
+      <div class="extraOption">
+        <h2>Estimate Shipping</h2>
+        <i class="fa-solid fa-chevron-left"></i>
+      </div>
+      <div class="extraOption" style="padding-top: 2rem;">
+        <h2>Order Instructions</h2>
+        <i class="fa-solid fa-chevron-left"></i>
+      </div>
+    </div>
+  </div>
+  <main>
+    <div id = "leftSideContent">
+      <div id = "product1Imgs">
+        <div id = "gallery">
+          <img src="../assets/Product Images/catanProduct.webp" alt="product1" class = "product1SmallImg">
+          <img src="../assets/Product Images/catan/board.png" alt="product1" class = "product1SmallImg">
+          <img src="../assets/Product Images/catan/pieces.png" alt="product1" class = "product1SmallImg">
+          <img src="../assets/Product Images/catan/board2.png" alt="product1" class = "product1SmallImg">
+          <img src="../assets/Product Images/catan/logo.png" alt="product1" class = "product1SmallImg">
+          <img src="../assets/Product Images/catan/board3.png" alt="product1" class = "product1SmallImg">
+        </div>
+        <img src="../assets/Product Images/catanProduct.webp" alt="product1" class = "product1Img">
+      </div>
+      <div id = "mainInfo">
+        <h2 class = "product1Brand">Catan Studio</h2>
+        <h1 class = "product1Name">Settlers of Catan: Explorers & Pirates</h1>
+        <h2 class = "product1Summary">Take to the seas and let the adventures begin! However, beware of its dangers.... The newest expansion in the Catan Universe.</h2>
+        <div id = "rating">
+          <i class="fa-solid fa-star star"></i>
+          <i class="fa-solid fa-star star"></i>
+          <i class="fa-solid fa-star star"></i>
+          <i class="fa-solid fa-star star"></i>
+          <i class="fa-solid fa-star star1"></i>
+          <h2 class="revText"> 16 Reviews</h2>
+        </div>
+        <div class = "product1PriceBundle">
+          <h1 class = "product1Price">$90.00</h1>
+          <div class = "status">
+            <i class = "fa-solid fa-circle fa-beat circle" style="--fa-animation-duration: 3s; --fa-beat-scale: 1.15;"></i>
+            <h2>In Stock</h2>
+          </div>
+        </div>
+        <div class = "quantity">
+          <i class="fa-solid fa-minus symbol1"></i>
+          <h2 class = "number1">1</h2>
+          <i class="fa-solid fa-plus symbol1"></i>
+          <button class="btn" onclick="showPopup('cart')" style="width: 50%; margin-left: 2rem;">Add to Cart</button>
+          <i class="fa-solid fa-heart icon" style="margin-left: 5%;"></i>
+        </div>
+      </div>
+    </div>
+    <div id = "rightSideContent">
+      <div class="section">
+        <h1 class = "sectionHeader">Description</h1>
+        <h3>A super fun expansion to the classic hit Settler's of Catan! Explore the seas, fight pirates, and claim dominion over your land!</h3>
+        <br>
+        <h3>Play through six new scenarios in an epic sequence or on their own.</h3>
+        <br>
+        <h3>The 5-6 player version is also available for extra fun with more friends and family!</h3>
+      </div>
+      <div class="section">
+        <h1 class = "sectionHeader">Product Details</h1>
+        <div class="productDeatailsBox">
+          <h3>Product Code:</h3>
+          <h3>21403869</h3>
+          <br> 
+          <h3>Barcode: </h3>
+          <h3>029877030699</h3>
+          <br> 
+          <h3>Publisher: </h3>
+          <h3>Asmodee</h3>
+          <br> 
+          <h3>Brand: </h3>
+          <h3>Catan</h3>
+          <br>
+          <h3>Playtime: </h3>
+          <h3>90-120 minutes</h3>
+          <br>
+          <h3>Recommended Age: </h3>
+          <h3>12+</h3>
+          <br>
+          <h3>Number of Players: </h3>
+          <h3>2-4</h3>
+          <br>
+          <h3>Themes: </h3>
+          <h3>Medieval</h3>
+          <br>
+          <h3>Board Game Mechanics: </h3>
+          <h3>Dice Rolling | Hand Management | Modular Board | Network Building | Trading</h3>
+            </h3>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

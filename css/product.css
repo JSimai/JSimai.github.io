@@ -1,0 +1,171 @@
+body {
+  background: #3f3f3f;
+}
+
+main {
+  display: flex;
+}
+
+.circle {
+  margin-right: 0.5rem;
+}
+
+#gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 20vw;
+}
+
+#leftSideContent {
+  width: 55%;
+  padding: 2rem;
+  height: 76vh;
+  overflow-y: scroll;
+}
+
+#mainInfo {
+
+}
+
+.number1 {
+  color: white;
+  font-size: 1.5rem;
+  font-family: myBoldFont;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.product1Brand {
+  font-family: myRegularFont;
+  font-size: 1rem;
+  color: white;
+  opacity: 0.3;
+  margin-top: 1rem;
+}
+
+
+.product1Img {
+  height: auto;
+  width: 22vw;
+}
+
+#product1Imgs {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-around;
+  align-items: center;
+  max-width: 90%;
+}
+
+.product1Name {
+  font-family: myBoldFont;
+  font-size: 1.7rem;
+  /* height: 4rem; */
+  color: #EA9F1C;
+  margin-top: 0.5rem;
+}
+
+.product1Price {
+  font-family: myBoldFont;
+  font-size: 2rem;
+  color: white;
+  margin-top: 0.5rem;
+}
+
+.product1PriceBundle {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  /* width: 100%; */
+}
+
+.product1SmallImg {
+  height: auto;
+  width: 7vw;
+  margin: 0.3rem;
+}
+
+.productDeatailsBox {
+  background-color: #2d2d2d;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.product1Summary {
+  font-family: myRegularFont;
+  font-size: 1rem;
+  color: white;
+  margin-top: 0.7rem;
+}
+
+#rating {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.revText {
+  font-family: myRegularFont;
+  font-size: 1rem;
+  color: white;
+}
+
+#rightSideContent {
+  width: 45%;
+  padding: 2rem;
+  height: 76vh;
+  overflow-y: scroll;
+}
+
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.sectionHeader {
+  font-family: myBoldFont;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.star {
+  color: #EA9F1C;
+  font-size: 1rem;
+  margin-right: 0.2rem;
+}
+
+.star1 {
+  color: white;
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+
+.status {
+  font-family: myRegularFont;
+  font-size: 1rem;
+  color: #90D81B;
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 1.5rem;
+}
+
+.symbol1 {
+  color: white;
+  border: 2px solid white;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.symbol1:hover {
+  cursor: pointer;
+  background-color: #EA9F1C;
+  border: 2px solid #EA9F1C;
+  transform: scale(0.95);
+}
