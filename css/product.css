@@ -25,10 +25,6 @@ main {
   overflow-y: scroll;
 }
 
-#mainInfo {
-
-}
-
 .number1 {
   color: white;
   font-size: 1.5rem;
@@ -83,6 +79,16 @@ main {
   /* width: 100%; */
 }
 
+.product1SalePrice {
+  font-family: myRegularFont;
+  font-size: 2rem;
+  color: white;
+  text-decoration: line-through;
+  text-decoration-color: #F14C48;
+  margin-top: 0.5rem;
+  margin-right: 1rem;
+}
+
 .product1SmallImg {
   height: auto;
   width: 7vw;
@@ -102,11 +108,32 @@ main {
   margin-top: 0.7rem;
 }
 
-#rating {
+.rating {
   display: flex;
   align-items: center;
   margin-top: 1rem;
   font-size: 1rem;
+}
+
+.reviewInstance {
+  border-bottom: 2px solid rgba(255,255,255,0.3);
+  padding-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.reviewName {
+  font-family: myBoldFont;
+  font-size: 1.3rem;
+  color: #EA9F1C;
+  
+}
+
+.reviewTitle {
+  font-family: myBoldFont;
+  font-size: 1.3rem;
+  color: white;
+  margin-top: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 
 .revText {

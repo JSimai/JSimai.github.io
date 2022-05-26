@@ -4,52 +4,53 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gas Games Home</title>
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/home.css">
-  <link rel="stylesheet" href="css/general.css">
-  <script src = "js/main.js"></script>
+  <title>productGrid</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/general.css">
+  <script src = "../js/main.js"></script>
   <script src="https://kit.fontawesome.com/c57e250b16.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <nav id = "navbar">
-    <img src="assets/ggIcon.webp" alt="GasGamesIcon" class = "ggIcon">
-    <div class = "navIconCont">
-      <i class="fa-solid fa-magnifying-glass navIcon"></i>
-      <i class="fa-solid fa-user-astronaut navIcon" onclick="showPopup('login')"></i>
-      <i class="fa-solid fa-cart-shopping navIcon" onclick="showPopup('cart')"></i>
-    </div>
-  </nav>
-  <div id = "homeImageCont">
-    <div class = "homeImage">
-      <img src="assets/inspo.jpg" alt="inspo">
-      <div>
-        <h2 class = "subHeader">Find Inspo</h2>
-        <h3>Not sure what you're looking for? We've got your back!</h3>
-        <a href = "html/inspo.html">
-          <button class="button">Explore
-            <i class="fa-solid fa-chevron-right arrow"></i>
-          </button>
-        </a>
+  <div>
+    <nav id = "navbar">
+      <a href="../index.html"><img src="../assets/ggIcon.webp" alt="GasGamesIcon" class = "ggIcon"></a>
+      <div class = "navIconCont">
+        <i class="fa-solid fa-magnifying-glass navIcon"></i>
+        <i class="fa-solid fa-user-astronaut navIcon" onclick="showPopup('login')"></i>
+        <i class="fa-solid fa-cart-shopping navIcon" onclick="showPopup('cart')"></i>
       </div>
-    </div>
-    <div class = "homeImage">
-      <img src="assets/browse.jpg" alt="inspo">
-      <div>
-        <h2 class = "subHeader">Browse</h2>
-        <h3>Want to find something particular? Look at our full range!</h3>
-        <a href = "html/browse.html">
-          <button class="button">Let's Go
-            <i class="fa-solid fa-chevron-right arrow"></i>
-          </button>
-        </a>
+    </nav>
+    <div id = "navMenu">
+      <a href="browse.html" class = "browseMenu">
+        <h2>Browse</h2>
+        <i class="fa-solid fa-chevron-left arrow"></i>
+      </a>
+      <div class = "hoverMenu">
+        <a href="gamesHome.html"><h2>Games</h2></a>
+        <a href="puzzlesHome.html"><h2>Puzzles</h2></a>
+        <a href="RPGHome.html"><h2>RPG</h2></a>
+        <a href="CCGHome.html"><h2>CCG</h2></a>
+        <a href="materialsHome.html"><h2>Materials</h2></a>
+        <a href="collectablesHome.html"><h2>Collectables</h2></a>
       </div>
+      <a href="inspo.html"><h2>Find Inspo</h2></a>
+      <a><h2>Publishers</h2></a>
+      <a><h2>About Us</h2></a>
+      <a><h2>Contact</h2></a>
     </div>
+    <h1 class = "title">GAMES</h1>
+    <img src="../assets/Catan.jpeg" alt="games" class = "navImg">
+    <!-- Grey Overlay -->
+    <div class = "navImg"></div>
+
   </div>
-  <div class="titleHome">
-    <h2 class="text">Welcome to</h2>
-    <h1 class="bigText">Gas Games</h1>
+  <div id = "catNavMenu">
+    <a><h2>All Games</h2></a>
+    <a><h2>Board Games</h2></a>
+    <a><h2>Family Games</h2></a>
+    <a><h2>Cards & Dice</h2></a>
   </div>
+
   <div id = "login">
     <div class = 'backBanner' onclick = "closePopup('login')">
       <div class = "contShop">
@@ -107,7 +108,7 @@
       </div>
       <div class="line"></div>
       <div class="cartItem">
-        <img src="./assets/Product Images/catanProduct.webp" class="itemImage" alt="Catan">
+        <img src="../assets/Product Images/catanProduct.webp" class="itemImage" alt="Catan">
         <div class = "itemInfo">
           <h2 class = "itemName">Settlers of Catan: Explorers and Pirates</h2>
           <div class = "priceBundle">
