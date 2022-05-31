@@ -16,7 +16,7 @@
     <nav id = "navbar">
       <a href="../../index.html"><img src="../../assets/ggIcon.webp" alt="GasGamesIcon" class = "ggIcon"></a>
       <div class = "navIconCont">
-        <i class="fa-solid fa-magnifying-glass navIcon"></i>
+        <i class="fa-solid fa-magnifying-glass navIcon" onclick="toggleSearch()"></i>
         <i class="fa-solid fa-user-astronaut navIcon" onclick="showPopup('login')"></i>
         <i class="fa-solid fa-cart-shopping navIcon" onclick="showPopup('cart')"></i>
       </div>
@@ -47,34 +47,42 @@
         <h3>Continue shopping</h3>
       </div>
     </div>
-    <div class="cartCont">
-      <h2 class = "popupHeader">Login or Register</h2>
+    <div id = "loginCont">
+      <div class="cartCont">
+        <h2 class = "popupHeader">Login or Register</h2>
+      </div>
+      <form class='form' onsubmit="handleForm(); return false">
+        <input 
+          type="email" 
+          class="input"
+          placeholder="Email" 
+          name="email" 
+          autoComplete="on"
+          required/><br />
+        <input
+          type="password"
+          class="input"
+          name="password"
+          placeholder="Password"
+          password="true"
+          required
+        /><br />
+        <input
+          type="submit"
+          class="btn"
+          style="width: 50%; margin-top: 2rem;"
+          name="login"
+          value="Login/Register"
+          autoComplete="on"
+        /> 
+      </form>
     </div>
-    <form class='form' onsubmit="handleForm()">
-      <input 
-        type="email" 
-        class="input"
-        placeholder="Email" 
-        name="email" 
-        autoComplete="on"
-        required/><br />
-      <input
-        type="password"
-        class="input"
-        name="password"
-        placeholder="Password"
-        password="true"
-        required
-      /><br />
-      <input
-        type="submit"
-        class="btn"
-        style="width: 50%; margin-top: 2rem;"
-        name="login"
-        value="Login/Register"
-        autoComplete="on"
-      /> 
-    </form>
+    <div id="greeting">
+      <h3 class = "greetingText">Welcome!</h3>
+      <div class="whiteBtn" style="margin-right: 0; margin-bottom: 2rem;">Wishlist</div>
+      <div class="whiteBtn" style="margin-right: 0; margin-bottom: 2rem;">Account Details</div>
+      <div class="btn" onclick="logout()">Logout</div>
+    </div>
   </div>
   <div id = "cart">
     <div class = "backBanner" onclick = "closePopup('cart')">
@@ -121,6 +129,15 @@
         <h2>Order Instructions</h2>
         <i class="fa-solid fa-chevron-left"></i>
       </div>
+    </div>
+  </div>
+  <div id= "search">
+    <div id = "backBox" onclick="toggleSearch()"></div>
+    <div id = "searchBar">
+      <input type="text" class="searchInput" placeholder="Search for games...">
+      <a href = "searchResults.html" class="searchBtn">
+        <i class="fa-solid fa-search"></i>
+      </a>
     </div>
   </div>
   <main>
@@ -242,5 +259,17 @@
       </div>
     </div>
   </main>
+  <footer id = "footer">
+    <div class = "shippingBundle">
+      <i class="fa-solid fa-truck-fast footerIcon"></i>
+      <h2 class = "shipping">Free shipping on orders over $150</h2>
+    </div>
+    <div class = "footerLinkBundle">
+      <h2 class="footerLink">Privacy Policy</h2>
+      <h2 class="footerLink">Terms of Service</h2>
+      <h2 class="footerLink">Refund Policy</h2>
+    </div>
+    <h3 class="footerText">Copyright © 2022 Gas Games. All Rights Reserved.</h3>
+  </footer>
 </body>
 </html>

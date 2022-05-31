@@ -21,7 +21,7 @@ main {
 #leftSideContent {
   width: 55%;
   padding: 2rem;
-  height: 76vh;
+  height: calc(100vh - 12rem);
   overflow-y: scroll;
 }
 
@@ -145,7 +145,7 @@ main {
 #rightSideContent {
   width: 45%;
   padding: 2rem;
-  height: 76vh;
+  height: calc(100vh - 12rem);
   overflow-y: scroll;
 }
 

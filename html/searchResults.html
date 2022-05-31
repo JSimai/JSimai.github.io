@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Grid</title>
+  <title>Search Result</title>
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/general.css">
   <link rel="stylesheet" href="../css/productGrid.css">
@@ -12,7 +12,7 @@
   <script src="https://kit.fontawesome.com/c57e250b16.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div>
+  <div class="navBack">
     <nav id = "navbar">
       <a href="../index.html"><img src="../assets/ggIcon.webp" alt="GasGamesIcon" class = "ggIcon"></a>
       <div class = "navIconCont">
@@ -39,17 +39,6 @@
       <a><h2>About Us</h2></a>
       <a><h2>Contact</h2></a>
     </div>
-    <h1 class = "title">GAMES</h1>
-    <img src="../assets/Catan.jpeg" alt="games" class = "navImg">
-    <!-- Grey Overlay -->
-    <div class = "navImg"></div>
-
-  </div>
-  <div id = "catNavMenu">
-    <a><h2>All Games</h2></a>
-    <a><h2>Board Games</h2></a>
-    <a><h2>Family Games</h2></a>
-    <a><h2>Cards & Dice</h2></a>
   </div>
 
   <div id = "login">
@@ -153,7 +142,7 @@
     </div>
   </div>
   <main>
-    <div id="leftSideContent">
+    <div id="leftSideContentSearch">
       <div id="filterBar">
         <div class="section" style="padding-top: 0; padding-bottom: 1.7rem;">
           <div class="sectionHeaderCont">
@@ -265,7 +254,7 @@
         </div>
       </div>
     </div>
-    <div id="rightSideContent">
+    <div id="rightSideContentSearch">
       <div class = "productGridGroup">
         <div class = "product" style="margin-bottom: 1.5rem;">
           <a href="product1.html"><img src="../../assets/Product Images/catanProduct.webp" alt="Catan" class = "productImage"></a>

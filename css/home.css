@@ -114,6 +114,6 @@ body {
   top: 15%;
   left: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 0;
   letter-spacing: 0.5rem;
 }
