@@ -1,0 +1,119 @@
+body {
+  background: #3f3f3f;
+}
+
+main {
+  display: flex;
+}
+
+.cartColumn {
+  font-family: myBoldFont;
+}
+
+.cartColumns {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  margin-left: 3%;
+  margin-top: 3%;
+  padding-left: 2%;
+  padding-right: 2%;
+  margin-right: 3%;
+}
+
+.cartHeader {
+  margin-top: 3%;
+  margin-left: 3%;
+}
+
+.cartHeaderText {
+  font-family: myBoldFont;
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.cartItem1 {
+  display: grid;
+  grid-template-columns: 0.5fr 2.5fr 1fr 1fr;
+  margin-left: 3%;
+  margin-top: 1%;
+  margin-right: 3%;
+  background-color: #2D2D2D;
+  padding: 2%;
+  border-radius: 0.5rem;
+}
+
+.cartItemImage {
+  height: 7rem;
+  width: auto;
+}
+
+.cartItemInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 5%;
+  margin-right: 7%;
+}
+
+.cartItemName {
+  font-size: 1.5rem;
+  color: #EA9F1C;
+  font-family: myRegularFont;
+}
+
+.cartItemPrice {
+  font-size: 1.3rem;
+  color: white;
+  font-family: myBoldFont;
+}
+
+.cartItemTotal {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  color: white;
+  font-family: myBoldFont;
+}
+
+.cartOption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: myRegularFont;
+  font-size: 1.2rem;
+  color: white;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.cartTotal {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  color: white;
+  font-family: myBoldFont;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+#leftSideContent {
+  width: 75%;
+  height: calc(100vh - 7rem);
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  border-right: 2px solid white;
+}
+
+#leftSideContent::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+#rightSideContent {
+  flex: 1;
+  padding: 3%;
+  margin-top: 7%;
+}

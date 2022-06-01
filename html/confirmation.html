@@ -4,105 +4,40 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Browse</title>
+  <title>Confirmation</title>
   <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/browse.css">
+  <link rel="stylesheet" href="../css/confirmation.css">
   <link rel="stylesheet" href="../css/general.css">
   <script src = "../js/main.js"></script>
   <script src="https://kit.fontawesome.com/c57e250b16.js" crossorigin="anonymous"></script>
 </head>
-
-<!-- Add question marks to explain categories -->
 <body>
-  <nav id = "navbar">
-    <a href="../index.html"><img src="../assets/ggIcon.webp" alt="GasGamesIcon" class = "ggIcon"></a>
-    <div class = "navIconCont">
-      <i class="fa-solid fa-magnifying-glass navIcon" onclick="toggleSearch()"></i>
-      <i class="fa-solid fa-user-astronaut navIcon" onclick="showPopup('login')"></i>
-      <i class="fa-solid fa-cart-shopping navIcon" onclick="showPopup('cart')"></i>
-    </div>
-  </nav>
-  <div id = "browseImageCont">
-    <div class = "browseImage">
-      <a href = "categoryHomes/gamesHome.html">
-        <img src="../assets/Catan.jpeg" alt="games">
-        <div>
-          <h2 class = "subHeader">G</h2>
-          <h2 class = "subHeader">A</h2>
-          <h2 class = "subHeader">M</h2>
-          <h2 class = "subHeader">E</h2>
-          <h2 class = "subHeader">S</h2>
-        </div>
+  <div class="navBack">
+    <nav id = "navbar">
+      <a href="../index.html"><img src="../assets/ggIcon.webp" alt="GasGamesIcon" class = "ggIcon"></a>
+      <div class = "navIconCont">
+        <i class="fa-solid fa-magnifying-glass navIcon" onclick="toggleSearch()"></i>
+        <i class="fa-solid fa-user-astronaut navIcon" onclick="showPopup('login')"></i>
+        <i class="fa-solid fa-cart-shopping navIcon" onclick="showPopup('cart')"></i>
+      </div>
+    </nav>
+    <div id = "navMenu">
+      <a href="browse.html" class = "browseMenu">
+        <h2>Browse</h2>
+        <i class="fa-solid fa-chevron-left arrow"></i>
       </a>
-    </div>
-    <div class = "browseImage">
-      <a href = "categoryHomes/puzzlesHome.html">
-        <img src="../assets/puzzles.jpeg" alt="puzzles">
-        <div>
-          <h2 class = "subHeader">P</h2>
-          <h2 class = "subHeader">U</h2>
-          <h2 class = "subHeader">Z</h2>
-          <h2 class = "subHeader">Z</h2>
-          <h2 class = "subHeader">L</h2>
-          <h2 class = "subHeader">E</h2>
-          <h2 class = "subHeader">S</h2>
-        </div>
-      </a>
-    </div>
-    <div class = "browseImage">
-      <a href = "categoryHomes/RPGHome.html">
-        <img src="../assets/RPG.png" alt="RPG">
-        <div>
-          <h2 class = "subHeader">R</h2>
-          <h2 class = "subHeader">P</h2>
-          <h2 class = "subHeader">G</h2>
-        </div>
-      </a>
-    </div>
-    <div class = "browseImage">
-      <a href = "categoryHomes/CCGHome.html">
-        <img src="../assets/CCG.png" alt="CCG">
-        <div>
-          <h2 class = "subHeader">C</h2>
-          <h2 class = "subHeader">C</h2>
-          <h2 class = "subHeader">G</h2>
-        </div>
-      </a>
-    </div>
-    <div class = "browseImage">
-      <a href = "categoryHomes/materialsHome.html">
-        <img src="../assets/materials.jpeg" alt="materials">
-        <div>
-          <h2 class = "subHeader">M</h2>
-          <h2 class = "subHeader">A</h2>
-          <h2 class = "subHeader">T</h2>
-          <h2 class = "subHeader">E</h2>
-          <h2 class = "subHeader">R</h2>
-          <h2 class = "subHeader">I</h2>
-          <h2 class = "subHeader">A</h2>
-          <h2 class = "subHeader">L</h2>
-          <h2 class = "subHeader">S</h2>
-        </div>
-      </a>
-    </div>
-    <div class = "browseImage">
-      <a href = "categoryHomes/collectablesHome.html">
-        <img src="../assets/jewellery.webp" alt="collectables">
-        <div>
-          <h2 class = "subHeader">C</h2>
-          <h2 class = "subHeader">O</h2>
-          <h2 class = "subHeader">L</h2>
-          <h2 class = "subHeader">L</h2>
-          <h2 class = "subHeader">E</h2>
-          <h2 class = "subHeader">C</h2>
-          <h2 class = "subHeader">T</h2>
-          <h2 class = "subHeader">A</h2>
-          <h2 class = "subHeader">B</h2>
-          <h2 class = "subHeader">L</h2>
-          <h2 class = "subHeader">E</h2>
-          <h2 class = "subHeader">S</h2>
-        </div>
-      </a>
+      <div class = "hoverMenu">
+        <a href="categoryHomes/gamesHome.html"><h2>Games</h2></a>
+        <a href="categoryHomes/puzzlesHome.html"><h2>Puzzles</h2></a>
+        <a href="categoryHomes/RPGHome.html"><h2>RPG</h2></a>
+        <a href="categoryHomes/CCGHome.html"><h2>CCG</h2></a>
+        <a href="categoryHomes/materialsHome.html"><h2>Materials</h2></a>
+        <a href="categoryHomes/collectablesHome.html"><h2>Collectables</h2></a>
+      </div>
+      <a href="inspo.html"><h2>Find Inspo</h2></a>
+      <a><h2>Publishers</h2></a>
+      <a><h2>About Us</h2></a>
+      <a><h2>Contact</h2></a>
     </div>
   </div>
   <div id = "login">
@@ -155,7 +90,7 @@
         <i class="fa-solid fa-chevron-left popupArrow"></i>
         <h3>Continue shopping</h3>
       </div>
-      <a href="cart.html" class="whiteBtn"><h2>View Cart</h2></a>
+      <a href = "cart.html" class="whiteBtn"><h2>View Cart</h2></a>
     </div>
     <div class="cartCont">
       <div class = "popupHeaderCont">
@@ -205,5 +140,67 @@
       </a>
     </div>
   </div>
+  <main>
+    <div class="topContent">
+      <i class="fa-solid fa-check tick"></i>
+      <h1 class="confirmationHeader">Order Confirmed</h1>
+      <div class="emailConf">
+        <h3>An email will be sent with your order details to </h3><h3 class="email">email@gmail.com</h3><h3>shortly</h3>
+      </div>
+      <a href="./browse.html" class="btn"> 
+        <h2>Continue Shopping</h2>
+      </a>
+    </div>
+    <div style="display: flex;">
+      <div id="leftSideContent">
+        <div class="checkoutItem">
+          <img src="../assets/Product Images/catanProduct.webp" class="checkoutItemImage" alt="Catan">
+          <div class="checkoutItemInfo">
+            <h2 class="checkoutItemName">Settlers of Catan: Explorers and Pirates</h2>
+            <h2 class="checkoutItemQuantity">x 1</h2>
+          </div>
+          <h2 class="checkoutItemPrice">$90.00</h2>
+        </div>
+        <div class="shippingCont">
+          <h3>+ Shipping</h3>
+          <h3 class="shippingPrice">$9.50</h3>
+        </div>
+        <div class="cartTotal">
+          <h2>Total:</h2>
+          <h2>$99.50</h2>
+        </div>
+      </div>
+      <div id="rightSideContent">
+        <div class="infoCont">
+          <h2 class="infoHeader">Order ID:</h2>
+          <h3>000038103</h3>
+        </div>
+        <div class="infoCont">
+          <h2 class="infoHeader">Shipping Address:</h2>
+          <h3>1 Street Road, Melbourne, VIC 3000, Australia</h3>
+        </div>
+        <div class="infoCont">
+          <h2 class="infoHeader">Billing Address:</h2>
+          <h3>1 Street Road, Melbourne, VIC 3000, Australia</h3>
+        </div>
+        <div class="infoCont">
+          <h2 class="infoHeader">Payment Method:</h2>
+          <h3>Card ending with 3582</h3>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer id = "footer">
+    <div class = "shippingBundle">
+      <i class="fa-solid fa-truck-fast footerIcon"></i>
+      <h2 class = "shipping">Free shipping on orders over $150</h2>
+    </div>
+    <div class = "footerLinkBundle">
+      <h2 class="footerLink">Privacy Policy</h2>
+      <h2 class="footerLink">Terms of Service</h2>
+      <h2 class="footerLink">Refund Policy</h2>
+    </div>
+    <h3 class="footerText">Copyright © 2022 Gas Games. All Rights Reserved.</h3>
+  </footer>
 </body>
 </html>

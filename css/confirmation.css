@@ -1,0 +1,137 @@
+body {
+  background: #3f3f3f;
+}
+
+.cartTotal {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: white;
+  font-family: myBoldFont;
+  padding-bottom: 2rem;
+}
+
+
+.checkoutItem {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  width: 80%;
+}
+
+.checkoutItemImage {
+  max-width: 8vw;
+  height: auto;
+}
+
+.checkoutItemInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* margin-left: 5%;
+  margin-right: 2%; */
+}
+
+.checkoutItemName {
+  font-size: 1.3rem;
+  color: #EA9F1C;
+  font-family: myRegularFont;
+}
+
+.checkoutItemPrice {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-bottom: 12%;
+  font-size: 1.2rem;
+  color: white;
+  font-family: myBoldFont;
+}
+
+.checkoutItemQuantity {
+  font-size: 1rem;
+  color: white;
+  font-family: myRegularFont;
+}
+
+.confirmationHeader {
+  font-size: 2rem;
+  font-family: myBoldFont;
+  color: white;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.email {
+  color: #EA9F1C;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.emailConf {
+  display: flex;
+}
+
+.infoCont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 2rem;
+}
+
+.infoHeader {
+  font-size: 1.3rem;
+  font-family: myBoldFont;
+  color: white;
+}
+
+#leftSideContent {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  border-right: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+#rightSideContent {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.shippingCont {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  padding-bottom: 2rem;
+  margin-top: 2rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.shippingPrice {
+  font-size: 1.2rem;
+  color: white;
+  font-family: myBoldFont;
+}
+
+.tick {
+  color: #90D81B;
+  font-size: 3em;
+}
+
+.topContent {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3%;
+  padding-bottom: 3%;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}

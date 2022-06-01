@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/checkout.css">
+  <link rel="stylesheet" href="../css/cart.css">
+  <link rel="stylesheet" href="../css/general.css">
+  <script src = "../js/main.js"></script>
+  <script src="https://kit.fontawesome.com/c57e250b16.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="navBack">
+    <nav id = "navbar">
+      <a href="../../index.html"><img src="../../assets/ggIcon.webp" alt="GasGamesIcon" class = "ggIcon"></a>
+      <div class = "navIconCont">
+        <i class="fa-solid fa-magnifying-glass navIcon" onclick="toggleSearch()"></i>
+        <i class="fa-solid fa-user-astronaut navIcon" onclick="showPopup('login')"></i>
+        <i class="fa-solid fa-cart-shopping navIcon" onclick="showPopup('cart')"></i>
+      </div>
+    </nav>
+    <div id = "navMenu">
+      <a href="browse.html" class = "browseMenu">
+        <h2>Browse</h2>
+        <i class="fa-solid fa-chevron-left arrow"></i>
+      </a>
+      <div class = "hoverMenu">
+        <a href="categoryHomes/gamesHome.html"><h2>Games</h2></a>
+        <a href="categoryHomes/puzzlesHome.html"><h2>Puzzles</h2></a>
+        <a href="categoryHomes/RPGHome.html"><h2>RPG</h2></a>
+        <a href="categoryHomes/CCGHome.html"><h2>CCG</h2></a>
+        <a href="categoryHomes/materialsHome.html"><h2>Materials</h2></a>
+        <a href="categoryHomes/collectablesHome.html"><h2>Collectables</h2></a>
+      </div>
+      <a href="inspo.html"><h2>Find Inspo</h2></a>
+      <a><h2>Publishers</h2></a>
+      <a><h2>About Us</h2></a>
+      <a><h2>Contact</h2></a>
+    </div>
+  </div>
+  <div id = "login">
+    <div class = 'backBanner' onclick = "closePopup('login')">
+      <div class = "contShop">
+        <i class="fa-solid fa-chevron-left popupArrow"></i>
+        <h3>Continue shopping</h3>
+      </div>
+    </div>
+    <div id = "loginCont">
+      <div class="cartCont">
+        <h2 class = "popupHeader">Login or Register</h2>
+      </div>
+      <form class='form' onsubmit="handleForm(); return false">
+        <input 
+          type="email" 
+          class="input"
+          placeholder="Email" 
+          name="email" 
+          autoComplete="on"
+          required/><br />
+        <input
+          type="password"
+          class="input"
+          name="password"
+          placeholder="Password"
+          password="true"
+          required
+        /><br />
+        <input
+          type="submit"
+          class="btn"
+          style="width: 50%; margin-top: 2rem;"
+          name="login"
+          value="Login/Register"
+          autoComplete="on"
+        /> 
+      </form>
+    </div>
+    <div id="greeting">
+      <h3 class = "greetingText">Welcome!</h3>
+      <div class="whiteBtn" style="margin-right: 0; margin-bottom: 2rem;">Wishlist</div>
+      <div class="whiteBtn" style="margin-right: 0; margin-bottom: 2rem;">Account Details</div>
+      <div class="btn" onclick="logout()">Logout</div>
+    </div>
+  </div>
+  <div id = "cart">
+    <div class = "backBanner" onclick = "closePopup('cart')">
+      <div class = "contShop">
+        <i class="fa-solid fa-chevron-left popupArrow"></i>
+        <h3>Continue shopping</h3>
+      </div>
+      <a href = "cart.html" class="whiteBtn"><h2>View Cart</h2></a>
+    </div>
+    <div class="cartCont">
+      <div class = "popupHeaderCont">
+        <h2 class = "popupHeader">My Order</h2>
+        <h3 style="margin-top: 0.7rem;" >Spend $60.00 more and get free shipping!</h3>
+      </div>
+      <div class="total">
+        <a href = "checkout.html" class="btn" style="width: 40%;">
+          <h2>Checkout</h2>
+        </a>
+        <h2 class = "totalPrice">Total: $90.00</h2>
+      </div>
+      <div class="line"></div>
+      <div class="cartItem">
+        <img src="../../assets/Product Images/catanProduct.webp" class="itemImage" alt="Catan">
+        <div class = "itemInfo">
+          <h2 class = "itemName">Settlers of Catan: Explorers and Pirates</h2>
+          <div class = "priceBundle">
+            <div class = "quantity">
+              <i class="fa-solid fa-minus symbol"></i>
+              <h2 class = "number">1</h2>
+              <i class="fa-solid fa-plus symbol"></i>
+            </div>
+            <h2 class = "itemPrice">$90.00</h2>
+          </div>
+        </div>
+      </div>
+      <div class="line"></div>
+    </div>
+    <div>
+      <div class="extraOption">
+        <h2>Estimate Shipping</h2>
+        <i class="fa-solid fa-chevron-left"></i>
+      </div>
+      <div class="extraOption" style="padding-top: 2rem;">
+        <h2>Order Instructions</h2>
+        <i class="fa-solid fa-chevron-left"></i>
+      </div>
+    </div>
+  </div>
+  <div id= "search">
+    <div id = "backBox" onclick="toggleSearch()"></div>
+    <div id = "searchBar">
+      <input type="text" class="searchInput" placeholder="Search for games...">
+      <a href = "searchResults.html" class="searchBtn">
+        <i class="fa-solid fa-search"></i>
+      </a>
+    </div>
+  </div>
+  <main>
+    <div id="leftSideContent">
+      <div class="layout">
+        <img src="../assets/payments.png" class="payments" alt="Catan">
+        <div class="orLayout">
+          <div class="orLine"></div>
+          <h2 class="orText">or</h2>
+          <div class="orLine"></div>
+        </div>
+        <div class="sectionHeaderCont">
+          <h1 class="sectionHeader">Contact Information</h1>
+          <div class="accountQ">
+            <h3>Already have an account?</h3>
+            <h3 class="loginQ" onclick="showPopup('login')">Log in</h3>
+          </div>
+        </div>
+        <form class='form' action="./payment.html">
+          <input 
+            type="email" 
+            class="input"
+            placeholder="Email" 
+            name="email" 
+            autoComplete="on"
+            required/><br />
+          <div class="sectionHeaderCont">
+            <h1 class="sectionHeader">Shipping Address</h1>
+          </div>
+          <input 
+            type="text"
+            class="input"
+            placeholder="Country/Region" 
+            name="country" 
+            autoComplete="on"
+            required/><br />
+          <input 
+            type="text"
+            class="input"
+            placeholder="First Name" 
+            name="first" 
+            autoComplete="on"
+            required/><br />
+          <input 
+            type="text"
+            class="input"
+            placeholder="Last Name" 
+            name="last" 
+            autoComplete="on"
+            required/><br />
+          <input 
+            type="text"
+            class="input"
+            placeholder="Address" 
+            name="address" 
+            autoComplete="on"
+            required/><br />
+          <input 
+            type="text"
+            class="input"
+            placeholder="Apartment, suite, etc. (optional)" 
+            name="apartment" 
+            autoComplete="on"/><br />
+          <input 
+            type="text"
+            class="input"
+            placeholder="Suburb" 
+            name="suburb" 
+            autoComplete="on"
+            required/><br />
+          <input 
+            type="text"
+            class="input"
+            placeholder="State/Territory" 
+            name="state" 
+            autoComplete="on"
+            required/><br />
+          <input 
+            type="number"
+            class="input"
+            placeholder="Postcode" 
+            name="postcode" 
+            autoComplete="on"
+            required/><br />
+          <input 
+            type="number"
+            class="input"
+            placeholder="Phone" 
+            name="phone" 
+            autoComplete="on"
+            required/><br />
+          <div class="sectionHeaderCont">
+            <h1 class="sectionHeader">Shipping Method</h1>
+          </div>
+          <div class="selection">
+            <div class="boxes">
+              <div class="outerBox"><div id="innerBox"></div></div>
+              <h2 class="selectionText">Standard Shipping</h2>
+            </div>
+            <h3>$9.50</h3>
+          </div>
+          <input
+            type="submit"
+            class = "btn"
+            style="width: 50%; margin-top: 2rem;"
+            name="payment"
+            value="Continue to Payment"
+            autoComplete="on"
+          />
+        </form>
+      </div>
+    </div>
+    <div id="rightSideContent">
+      <div class="cartTotal">
+        <h2>Total:</h2>
+        <h2>$90.00</h2>
+      </div>
+      <div class="checkoutItem">
+        <img src="../assets/Product Images/catanProduct.webp" class="checkoutItemImage" alt="Catan">
+        <div class="checkoutItemInfo">
+          <h2 class="checkoutItemName">Settlers of Catan: Explorers and Pirates</h2>
+          <h2 class="checkoutItemQuantity">x 1</h2>
+        </div>
+        <h2 class="checkoutItemPrice">$90.00</h2>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

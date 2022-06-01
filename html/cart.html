@@ -14,7 +14,7 @@
 <body>
   <div class="navBack">
     <nav id = "navbar">
-      <a href="../../index.html"><img src="../../assets/ggIcon.webp" alt="GasGamesIcon" class = "ggIcon"></a>
+      <a href="../index.html"><img src="../assets/ggIcon.webp" alt="GasGamesIcon" class = "ggIcon"></a>
       <div class = "navIconCont">
         <i class="fa-solid fa-magnifying-glass navIcon" onclick="toggleSearch()"></i>
         <i class="fa-solid fa-user-astronaut navIcon" onclick="showPopup('login')"></i>
@@ -90,7 +90,7 @@
         <i class="fa-solid fa-chevron-left popupArrow"></i>
         <h3>Continue shopping</h3>
       </div>
-      <a href="../index.html" class="whiteBtn"><h2>View Cart</h2></a>
+      <a href = "cart.html" class="whiteBtn"><h2>View Cart</h2></a>
     </div>
     <div class="cartCont">
       <div class = "popupHeaderCont">
@@ -98,14 +98,14 @@
         <h3 style="margin-top: 0.7rem;" >Spend $60.00 more and get free shipping!</h3>
       </div>
       <div class="total">
-        <button class="btn" style="width: 40%;">
+        <a href = "checkout.html" class="btn" style="width: 40%;">
           <h2>Checkout</h2>
-        </button>
+        </a>
         <h2 class = "totalPrice">Total: $90.00</h2>
       </div>
       <div class="line"></div>
       <div class="cartItem">
-        <img src="../../assets/Product Images/catanProduct.webp" class="itemImage" alt="Catan">
+        <img src="../assets/Product Images/catanProduct.webp" class="itemImage" alt="Catan">
         <div class = "itemInfo">
           <h2 class = "itemName">Settlers of Catan: Explorers and Pirates</h2>
           <div class = "priceBundle">
@@ -141,7 +141,164 @@
     </div>
   </div>
   <main>
-    
+    <div id="leftSideContent">
+      <div class = "cartHeader">
+        <h1 class="cartHeaderText">My Cart</h1>
+        <h3>Spend $60.00 more and get free shipping!</h3>
+      </div>
+      <div class = "cartColumns">
+        <h3 class="cartColumn">Product</h3>
+        <h3 class="cartColumn">Quantity</h3>
+        <h3 class="cartColumn">Total</h3>
+      </div>
+      <div class="cartItem1">
+        <img src="../assets/Product Images/catanProduct.webp" class="cartItemImage" alt="Catan">
+        <div class = "cartItemInfo">
+          <h2 class = "cartItemName">Settlers of Catan: Explorers and Pirates</h2>
+          <h2 class="cartItemPrice">$90.00</h2>
+        </div>
+        <div class = "quantity">
+          <i class="fa-solid fa-minus symbol"></i>
+          <h2 class = "number">1</h2>
+          <i class="fa-solid fa-plus symbol"></i>
+        </div>
+        <h2 class = "cartItemTotal">$90.00</h2>
+      </div>
+      <div class = "productBundle">
+        <h2 class = "groupTitle">Complete Your Cart</h2>
+        <div class = "productGroup">
+          <div class = "product" style="margin-left: 2rem;" >
+            <a href="../product2.html"><img src="../assets/Product Images/wingpsan.png" alt="Catan" class = "productImage"></a>
+            <h2 class = "productCompany">Stonemaier Games</h2>
+            <a href="../product2.html" class="productName"><h2>Wingspan</h2></a>
+            <div class= "productPriceBundle">
+              <h2 class = "productPrice" style="color: #F14C48;">$85.00</h2>
+              <div class = "actionIcons">
+                <i class="fa-solid fa-cart-plus icon" onclick="showPopup('cart')"></i>
+                <i class="fa-solid fa-heart icon"></i>
+              </div>
+            </div>
+            <div class = "saleBox">
+              <h2 class = "saleText">Sale</h2>
+              <h2 class="salePrice">Was: $110.00</h2>
+            </div>
+          </div>
+          <div class = "product" >
+            <a href="../product1.html"><img src="../assets/Product Images/arnak.png" alt="Catan" class = "productImage"></a>
+            <h2 class = "productCompany">Czech Games</h2>
+            <a href="../product1.html" class="productName"><h2>Lost Ruins of Arnak</h2></a>
+            <div class= "productPriceBundle">
+              <h2 class = "productPrice">$110.00</h2>
+              <div class = "actionIcons">
+                <i class="fa-solid fa-cart-plus icon" onclick="showPopup('cart')"></i>
+                <i class="fa-solid fa-heart icon"></i>
+              </div>
+            </div>
+          </div>
+          <div class = "product" >
+            <a href="../product1.html"><img src="../assets/Product Images/dixit.png" alt="Catan" class = "productImage"></a>
+            <h2 class = "productCompany">Asmodee</h2>
+            <a href="../product1.html" class="productName"><h2>Dixit</h2></a>
+            <div class= "productPriceBundle">
+              <h2 class = "productPrice">$65.00</h2>
+              <div class = "actionIcons">
+                <i class="fa-solid fa-cart-plus icon" onclick="showPopup('cart')"></i>
+                <i class="fa-solid fa-heart icon"></i>
+              </div>
+            </div>
+          </div>
+          <div class = "product" >
+            <a href="../product1.html"><img src="../assets/Product Images/azul.png" alt="Catan" class = "productImage"></a>
+            <h2 class = "productCompany">Plan B Games</h2>
+            <a href="../product1.html" class="productName"><h2>Azul</h2></a>
+            <div class= "productPriceBundle">
+              <h2 class = "productPrice">$75.00</h2>
+              <div class = "actionIcons">
+                <i class="fa-solid fa-cart-plus icon" onclick="showPopup('cart')"></i>
+                <i class="fa-solid fa-heart icon"></i>
+              </div>
+            </div>
+          </div>
+          <div class = "product" >
+            <a href="../product1.html"><img src="../assets/Product Images/ttrEurope.png" alt="Catan" class = "productImage"></a>
+            <h2 class = "productCompany">Days of Wonder</h2>
+            <a href="../product1.html" class="productName"><h2>Ticket to Ride Europe</h2></a>
+            <div class= "productPriceBundle">
+              <h2 class = "productPrice">$80.00</h2>
+              <div class = "actionIcons">
+                <i class="fa-solid fa-cart-plus icon" onclick="showPopup('cart')"></i>
+                <i class="fa-solid fa-heart icon"></i>
+              </div>
+            </div>
+          </div>
+          <div class = "product" >
+            <a href="../product1.html"><img src="../assets/Product Images/ttrUSA.png" alt="Catan" class = "productImage"></a>
+            <h2 class = "productCompany">Days of Wonder</h2>
+            <a href="../product1.html" class="productName"><h2>Ticket to Ride USA</h2></a>
+            <div class= "productPriceBundle">
+              <h2 class = "productPrice">$80.00</h2>
+              <div class = "actionIcons">
+                <i class="fa-solid fa-cart-plus icon" onclick="showPopup('cart')"></i>
+                <i class="fa-solid fa-heart icon"></i>
+              </div>
+            </div>
+          </div>
+          <div class = "product" >
+            <a href="../product1.html"><img src="../assets/Product Images/splendor.png" alt="Catan" class = "productImage"></a>
+            <h2 class = "productCompany">Asmodee</h2>
+            <a href="../product1.html" class="productName"><h2>Splendor</h2></a>
+            <div class= "productPriceBundle">
+              <h2 class = "productPrice">$80.00</h2>
+              <div class = "actionIcons">
+                <i class="fa-solid fa-cart-plus icon" onclick="showPopup('cart')"></i>
+                <i class="fa-solid fa-heart icon"></i>
+              </div>
+            </div>
+          </div>
+          <div class = "product" >
+            <a href="../product1.html"><img src="../assets/Product Images/codenames.png" alt="Catan" class = "productImage"></a>
+            <h2 class = "productCompany">Czech Games</h2>
+            <a href="../product1.html" class="productName"><h2>Codenames</h2></a>
+            <div class= "productPriceBundle">
+              <h2 class = "productPrice">$32.00</h2>
+              <div class = "actionIcons">
+                <i class="fa-solid fa-cart-plus icon" onclick="showPopup('cart')"></i>
+                <i class="fa-solid fa-heart icon"></i>
+              </div>
+            </div>
+          </div>
+          <div class = "product" >
+            <a href="../product1.html"><img src="../assets/Product Images/explode.png" alt="Catan" class = "productImage"></a>
+            <h2 class = "productCompany">Exploding Kittens</h2>
+            <a href="../product1.html" class="productName"><h2>Exploding Kittens</h2></a>
+            <div class= "productPriceBundle">
+              <h2 class = "productPrice">$45.00</h2>
+              <div class = "actionIcons">
+                <i class="fa-solid fa-cart-plus icon" onclick="showPopup('cart')"></i>
+                <i class="fa-solid fa-heart icon"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="rightSideContent">
+      <div class="cartTotal">
+        <h2>Cart Total:</h2>
+        <h2>$90.00</h2>
+      </div>
+      <div class="cartOption">
+        <h2>Order Instructions</h2>
+        <i class="fa-solid fa-chevron-left"></i>
+      </div>
+      <div class="cartOption">
+        <h2>Estimate Shipping</h2>
+        <i class="fa-solid fa-chevron-left"></i>
+      </div>
+      <a href="checkout.html" class="btn" style="margin-top: 2rem;">
+        <h2>Checkout</h2>
+      </a>
+    </div>
   </main>
   <footer id = "footer">
     <div class = "shippingBundle">
