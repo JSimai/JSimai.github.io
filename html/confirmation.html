@@ -14,6 +14,7 @@
 <body>
   <div class="navBack">
     <nav id = "navbar">
+      <i class="fa-bars bars" onclick="toggleMobileMenu('mobileMainMenu')"></i>
       <a href="../index.html"><img src="../assets/ggIcon.webp" alt="GasGamesIcon" class = "ggIcon"></a>
       <div class = "navIconCont">
         <i class="fa-solid fa-magnifying-glass navIcon" onclick="toggleSearch()"></i>
@@ -140,18 +141,43 @@
       </a>
     </div>
   </div>
+  <div id = "mobileMainMenu">
+    <i class="fa-solid fa-xmark mobileXMark" onclick="toggleMobileMenu('mobileMainMenu')"></i>
+    <a class = "mobileBrowseMenu" style="margin-top: 3rem;" onclick="toggleMobileMenu('mobileBrowseMenuScreen')">
+      <h2>Browse</h2>
+      <i class="fa-solid fa-chevron-right arrow"></i>
+    </a>
+    <a href="inspo.html"><h2>Find Inspo</h2></a>
+    <a><h2>Publishers</h2></a>
+    <a><h2>About Us</h2></a>
+    <a><h2>Contact</h2></a>
+  </div>
+  <div id = "mobileBrowseMenuScreen">
+    <i class="fa-solid fa-chevron-left mobileXMark" style="color: rgba(255,255,255,0.3);" onclick="toggleMobileMenu('mobileBrowseMenuScreen')"></i>
+    <a href="browse.html" style="margin-top: 3rem;"><h2>Home</h2></a>
+    <a href="categoryHomes/gamesHome.html"><h2>Games</h2></a>
+    <a href="categoryHomes/puzzlesHome.html"><h2>Puzzles</h2></a>
+    <a href="categoryHomes/RPGHome.html"><h2>RPG</h2></a>
+    <a href="categoryHomes/CCGHome.html"><h2>CCG</h2></a>
+    <a href="categoryHomes/materialsHome.html"><h2>Materials</h2></a>
+    <a href="categoryHomes/collectablesHome.html" style="margin-bottom: 2rem;"><h2>Collectables</h2></a>
+  </div>
   <main>
     <div class="topContent">
       <i class="fa-solid fa-check tick"></i>
       <h1 class="confirmationHeader">Order Confirmed</h1>
       <div class="emailConf">
-        <h3>An email will be sent with your order details to </h3><h3 class="email">email@gmail.com</h3><h3>shortly</h3>
+        <h3>An email will be sent with your order details to </h3>
+        <div class="emailLayout">
+          <h3 class="email">email@gmail.com</h3>
+          <h3>shortly</h3>
+        </div>
       </div>
       <a href="./browse.html" class="btn"> 
         <h2>Continue Shopping</h2>
       </a>
     </div>
-    <div style="display: flex;">
+    <div class="bottomContent">
       <div id="leftSideContent">
         <div class="checkoutItem">
           <img src="../assets/Product Images/catanProduct.webp" class="checkoutItemImage" alt="Catan">
@@ -187,6 +213,40 @@
           <h2 class="infoHeader">Payment Method:</h2>
           <h3>Card ending with 3582</h3>
         </div>
+      </div>
+    </div>
+    <div class="bottomContent1">
+      <div class="checkoutItem">
+        <img src="../assets/Product Images/catanProduct.webp" class="checkoutItemImage" alt="Catan">
+        <div class="checkoutItemInfo">
+          <h2 class="checkoutItemName">Settlers of Catan: Explorers and Pirates</h2>
+          <h2 class="checkoutItemQuantity">x 1</h2>
+        </div>
+        <h2 class="checkoutItemPrice">$90.00</h2>
+      </div>
+      <div class="shippingCont">
+        <h3>+ Shipping</h3>
+        <h3 class="shippingPrice">$9.50</h3>
+      </div>
+      <div class="cartTotal">
+        <h2>Total:</h2>
+        <h2>$99.50</h2>
+      </div>
+      <div class="infoCont" style="margin-top: 2rem;">
+        <h2 class="infoHeader">Order ID:</h2>
+        <h3>000038103</h3>
+      </div>
+      <div class="infoCont">
+        <h2 class="infoHeader">Shipping Address:</h2>
+        <h3>1 Street Road, Melbourne, VIC 3000, Australia</h3>
+      </div>
+      <div class="infoCont">
+        <h2 class="infoHeader">Billing Address:</h2>
+        <h3>1 Street Road, Melbourne, VIC 3000, Australia</h3>
+      </div>
+      <div class="infoCont">
+        <h2 class="infoHeader">Payment Method:</h2>
+        <h3>Card ending with 3582</h3>
       </div>
     </div>
   </main>

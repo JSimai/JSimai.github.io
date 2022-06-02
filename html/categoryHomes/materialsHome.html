@@ -14,6 +14,7 @@
 <body>
   <div>
     <nav id = "navbar">
+      <i class="fa-bars bars" onclick="toggleMobileMenu('mobileMainMenu')"></i>
       <a href="../../index.html"><img src="../../assets/ggIcon.webp" alt="GasGamesIcon" class = "ggIcon"></a>
       <div class = "navIconCont">
         <i class="fa-solid fa-magnifying-glass navIcon" onclick="toggleSearch()"></i>
@@ -47,6 +48,10 @@
   </div>
 
   <div id = "catNavMenu">
+    <div class = "catNavMenuMobCont" onclick="toggleMobileMenu('mobileCatMenu')">
+      <i class="fa-solid fa-bars bars1"></i>
+      <h1>Materials Menu</h1>
+    </div>
     <a href="../productGrid.html"><h2>All Materials</h2></a>
     <a href="../productGrid.html"><h2>Paints</h2></a>
     <a href="../productGrid.html"><h2>Brushes</h2></a>
@@ -153,12 +158,43 @@
       </a>
     </div>
   </div>
+  <div id = "mobileMainMenu">
+    <i class="fa-solid fa-xmark mobileXMark" onclick="toggleMobileMenu('mobileMainMenu')"></i>
+    <a class = "mobileBrowseMenu" style="margin-top: 3rem;" onclick="toggleMobileMenu('mobileBrowseMenuScreen')">
+      <h2>Browse</h2>
+      <i class="fa-solid fa-chevron-right arrow"></i>
+    </a>
+    <a href="../inspo.html"><h2>Find Inspo</h2></a>
+    <a><h2>Publishers</h2></a>
+    <a><h2>About Us</h2></a>
+    <a><h2>Contact</h2></a>
+  </div>
+  <div id = "mobileBrowseMenuScreen">
+    <i class="fa-solid fa-chevron-left mobileXMark" style="color: rgba(255,255,255,0.3);" onclick="toggleMobileMenu('mobileBrowseMenuScreen')"></i>
+    <a href="../browse.html" style="margin-top: 3rem;"><h2>Home</h2></a>
+    <a href="gamesHome.html"><h2>Games</h2></a>
+    <a href="puzzlesHome.html"><h2>Puzzles</h2></a>
+    <a href="RPGHome.html"><h2>RPG</h2></a>
+    <a href="CCGHome.html"><h2>CCG</h2></a>
+    <a href="materialsHome.html"><h2>Materials</h2></a>
+    <a href="collectablesHome.html" style="margin-bottom: 2rem;"><h2>Collectables</h2></a>
+  </div>
+  <div id = "mobileCatMenu">
+    <div class = "mobileCatHeader">
+      <h1>MATERIALS</h1>
+      <i class="fa-solid fa-xmark mobileXMarkCat" onclick="toggleMobileMenu('mobileCatMenu')"></i>
+    </div>
+    <a href="../productGrid.html" style="margin-top: 3rem;"><h2>All Materials</h2></a>
+    <a href="../productGrid.html"><h2>Paints</h2></a>
+    <a href="../productGrid.html"><h2>Brushes</h2></a>
+    <a href="../productGrid.html"><h2>Decorations</h2></a>
+  </div>
 
   <main id = "content">
     <div class = "productBundle">
       <h2 class = "groupTitle">Best Sellers</h2>
       <div class = "productGroup">
-        <div class = "product" style="margin-left: 2rem;">
+        <div class = "productFirst">
           <a href="../product1.html"><img src="../../assets/Product Images/paint.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">Games Workshop</h2>
           <a href="../product1.html" class="productName"><h2>Citadel Spray Paint</h2></a>
@@ -279,7 +315,7 @@
     <div class = "productBundle">
       <h2 class = "groupTitle">Models</h2>
       <div class = "productGroup">
-        <div class = "product" style="margin-left: 2rem;">
+        <div class = "productFirst">
           <a href="../product1.html"><img src="../../assets/Product Images/truck.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">U Gears</h2>
           <a href="../product1.html" class="productName"><h2>U Gears Heavy Boy Truck</h2></a>

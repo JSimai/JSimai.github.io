@@ -12,35 +12,40 @@
   <script src="https://kit.fontawesome.com/c57e250b16.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <nav id = "navbar">
-    <a href="../index.html"><img src="../assets/ggIcon.webp" alt="GasGamesIcon" class = "ggIcon"></a>
-    <div class = "navIconCont">
-      <i class="fa-solid fa-magnifying-glass navIcon" onclick="toggleSearch()"></i>
-      <i class="fa-solid fa-user-astronaut navIcon" onclick="showPopup('login')"></i>
-      <i class="fa-solid fa-cart-shopping navIcon" onclick="showPopup('cart')"></i>
+  <div>
+    <nav id = "navbar">
+      <i class="fa-bars bars" onclick="toggleMobileMenu('mobileMainMenu')"></i>
+      <a href="../index.html"><img src="../assets/ggIcon.webp" alt="GasGamesIcon" class = "ggIcon"></a>
+      <div class = "navIconCont">
+        <i class="fa-solid fa-magnifying-glass navIcon" onclick="toggleSearch()"></i>
+        <i class="fa-solid fa-user-astronaut navIcon" onclick="showPopup('login')"></i>
+        <i class="fa-solid fa-cart-shopping navIcon" onclick="showPopup('cart')"></i>
+      </div>
+    </nav>
+    <div id = "navMenu">
+      <a href="browse.html" class = "browseMenu">
+        <h2>Browse</h2>
+        <i class="fa-solid fa-chevron-left arrow"></i>
+      </a>
+      <div class = "hoverMenu">
+        <a href="categoryHomes/gamesHome.html"><h2>Games</h2></a>
+        <a href="categoryHomes/puzzlesHome.html"><h2>Puzzles</h2></a>
+        <a href="categoryHomes/RPGHome.html"><h2>RPG</h2></a>
+        <a href="categoryHomes/CCGHome.html"><h2>CCG</h2></a>
+        <a href="categoryHomes/materialsHome.html"><h2>Materials</h2></a>
+        <a href="categoryHomes/collectablesHome.html"><h2>Collectables</h2></a>
+      </div>
+      <a href="inspo.html"><h2>Find Inspo</h2></a>
+      <a><h2>Publishers</h2></a>
+      <a><h2>About Us</h2></a>
+      <a><h2>Contact</h2></a>
     </div>
-  </nav>
-  <div id = "navMenu">
-    <a href="browse.html" class = "browseMenu">
-      <h2>Browse</h2>
-      <i class="fa-solid fa-chevron-left arrow"></i>
-    </a>
-    <div class = "hoverMenu">
-      <a href="./categoryHomes/gamesHome.html"><h2>Games</h2></a>
-      <a href="./categoryHomes/puzzlesHome.html"><h2>Puzzles</h2></a>
-      <a href="./categoryHomes/RPGHome.html"><h2>RPG</h2></a>
-      <a href="./categoryHomes/CCGHome.html"><h2>CCG</h2></a>
-      <a href="./categoryHomes/materialsHome.html"><h2>Materials</h2></a>
-      <a href="./categoryHomes/collectablesHome.html"><h2>Collectables</h2></a>
-    </div>
-    <a><h2>Find Inspo</h2></a>
-    <a><h2>Publishers</h2></a>
-    <a><h2>About Us</h2></a>
-    <a><h2>Contact</h2></a>
+    <h1 class = "title">FIND INSPO</h1>
+    <img src="../assets/inspo.jpg" alt="inspo" class = "navImg">
+    <!-- Grey Overlay -->
+    <div class = "navImg"></div>
+
   </div>
-  <h1 class = "title">FIND INSPO</h1>
-  <img src="../assets/inspo.jpg" alt="inspo" class = "navImg">
-  <div class = "navImg"></div>
   <div id = "login">
     <div class = 'backBanner' onclick = "closePopup('login')">
       <div class = "contShop">
@@ -141,5 +146,235 @@
       </a>
     </div>
   </div>
+  <div id = "mobileMainMenu">
+    <i class="fa-solid fa-xmark mobileXMark" onclick="toggleMobileMenu('mobileMainMenu')"></i>
+    <a class = "mobileBrowseMenu" style="margin-top: 3rem;" onclick="toggleMobileMenu('mobileBrowseMenuScreen')">
+      <h2>Browse</h2>
+      <i class="fa-solid fa-chevron-right arrow"></i>
+    </a>
+    <a href="inspo.html"><h2>Find Inspo</h2></a>
+    <a><h2>Publishers</h2></a>
+    <a><h2>About Us</h2></a>
+    <a><h2>Contact</h2></a>
+  </div>
+  <div id = "mobileBrowseMenuScreen">
+    <i class="fa-solid fa-chevron-left mobileXMark" style="color: rgba(255,255,255,0.3);" onclick="toggleMobileMenu('mobileBrowseMenuScreen')"></i>
+    <a href="browse.html" style="margin-top: 3rem;"><h2>Home</h2></a>
+    <a href="categoryHomes/gamesHome.html"><h2>Games</h2></a>
+    <a href="categoryHomes/puzzlesHome.html"><h2>Puzzles</h2></a>
+    <a href="categoryHomes/RPGHome.html"><h2>RPG</h2></a>
+    <a href="categoryHomes/CCGHome.html"><h2>CCG</h2></a>
+    <a href="categoryHomes/materialsHome.html"><h2>Materials</h2></a>
+    <a href="categoryHomes/collectablesHome.html" style="margin-bottom: 2rem;"><h2>Collectables</h2></a>
+  </div>
+  <main>
+    <div class = "productBundle">
+      <h2 class = "groupTitle">Great Gas Guides</h2>
+      <div class = "productGroup">
+        <div class="guideFirst">
+          <img src="../assets/Game day-cuate (1).png" alt="Catan" class = "guideImage">
+          <h3 class="guideText">Top 100 Board Games Ever!</h3>
+        </div>
+        <div class="guide">
+          <img src="../assets/Creative team-cuate.png" alt="Catan" class = "guideImage">
+          <h3 class="guideText">Best Way to Learn Dungeons & Dragons</h3>
+        </div>
+        <div class="guide">
+          <img src="../assets/Team goals-cuate.png" alt="Catan" class = "guideImage">
+          <h3 class="guideText">A Guide to Puzzle Mastery</h3>
+        </div>
+        <div class="guide">
+          <img src="../assets/Game day-cuate (1).png" alt="Catan" class = "guideImage">
+          <h3 class="guideText">How to Run a Party Game</h3>
+        </div>
+        <div class="guide">
+          <img src="../assets/Creative team-cuate.png" alt="Catan" class = "guideImage">
+          <h3 class="guideText">Co-op is the New Competitive</h3>
+        </div>
+        <div class="guide">
+          <img src="../assets/Team goals-cuate.png" alt="Catan" class = "guideImage">
+          <h3 class="guideText">How to Make a New Game</h3>
+        </div>
+        <div class="guide">
+          <img src="../assets/Game day-cuate (1).png" alt="Catan" class = "guideImage">
+          <h3 class="guideText">Get the Kids Involved!</h3>
+        </div>
+        <div class="guide">
+          <img src="../assets/Creative team-cuate.png" alt="Catan" class = "guideImage">
+          <h3 class="guideText">How to Create a Miniature Set</h3>
+        </div>
+        <div class="guide">
+          <img src="../assets/Team goals-cuate.png" alt="Catan" class = "guideImage">
+          <h3 class="guideText">Let's get into CCG!</h3>
+        </div>
+        <div class="guide">
+          <img src="../assets/Game day-cuate (1).png" alt="Catan" class = "guideImage">
+          <h3 class="guideText">A Secret Guid to Brain Teasers</h3>
+        </div>
+        <div class="guide">
+          <img src="../assets/Creative team-cuate.png" alt="Catan" class = "guideImage">
+          <h3 class="guideText">How to Make Games Romantic...</h3>
+        </div>
+        <div class="guide">
+          <img src="../assets/Team goals-cuate.png" alt="Catan" class = "guideImage">
+          <h3 class="guideText">An Awesome Guide</h3>
+        </div>
+      </div>
+    </div>
+    <div class = "productBundle">
+      <h2 class = "groupTitle">Gas Games TV</h2>
+      <div class = "productGroup">
+        <img src="../assets/tv1.png" alt="Catan" class = "tvImageFirst">
+        <img src="../assets/tv2.png" alt="Catan" class = "tvImage">
+        <img src="../assets/tv3.png" alt="Catan" class = "tvImage">
+        <img src="../assets/tv4.png" alt="Catan" class = "tvImage">
+        <img src="../assets/tv1.png" alt="Catan" class = "tvImage">
+        <img src="../assets/tv2.png" alt="Catan" class = "tvImage">
+        <img src="../assets/tv3.png" alt="Catan" class = "tvImage">
+        <img src="../assets/tv4.png" alt="Catan" class = "tvImage">
+      </div>
+    </div>
+    <div class = "productBundle">
+      <h2 class = "groupTitle">Best Selling Games</h2>
+      <div class = "productGroup">
+        <div class = "productFirst">
+          <a href="product1.html"><img src="../assets/Product Images/catanProduct.webp" alt="Catan" class = "productImage"></a>
+          <h2 class = "productCompany">Catan Studio</h2>
+          <a href="product1.html" class="productName"><h2>Settlers of Catan: Explorers and Pirates</h2></a>
+          <div class= "productPriceBundle">
+            <h2 class = "productPrice">$90.00</h2>
+            <div class = "actionIcons">
+              <div><i class="fa-solid fa-cart-plus icon" onclick="showPopup('cart')"></i></div>
+              <i class="fa-solid fa-heart icon"></i>
+            </div>
+          </div>
+        </div>
+        <div class = "product" >
+          <a href="product2.html"><img src="../assets/Product Images/wingpsan.png" alt="Catan" class = "productImage"></a>
+          <h2 class = "productCompany">Stonemaier Games</h2>
+          <a href="product2.html" class="productName"><h2>Wingspan</h2></a>
+          <div class= "productPriceBundle">
+            <h2 class = "productPrice" style="color: #F14C48;">$85.00</h2>
+            <div class = "actionIcons">
+              <i class="fa-solid fa-cart-plus icon" onclick="showPopup('cart')"></i>
+              <i class="fa-solid fa-heart icon"></i>
+            </div>
+          </div>
+          <div class = "saleBox">
+            <h2 class = "saleText">Sale</h2>
+            <h2 class="salePrice">Was: $110.00</h2>
+          </div>
+        </div>
+        <div class = "product" >
+          <a href="product1.html"><img src="../assets/Product Images/arnak.png" alt="Catan" class = "productImage"></a>
+          <h2 class = "productCompany">Czech Games</h2>
+          <a href="product1.html" class="productName"><h2>Lost Ruins of Arnak</h2></a>
+          <div class= "productPriceBundle">
+            <h2 class = "productPrice">$110.00</h2>
+            <div class = "actionIcons">
+              <i class="fa-solid fa-cart-plus icon" onclick="showPopup('cart')"></i>
+              <i class="fa-solid fa-heart icon"></i>
+            </div>
+          </div>
+        </div>
+        <div class = "product" >
+          <a href="product1.html"><img src="../assets/Product Images/dixit.png" alt="Catan" class = "productImage"></a>
+          <h2 class = "productCompany">Asmodee</h2>
+          <a href="product1.html" class="productName"><h2>Dixit</h2></a>
+          <div class= "productPriceBundle">
+            <h2 class = "productPrice">$65.00</h2>
+            <div class = "actionIcons">
+              <i class="fa-solid fa-cart-plus icon" onclick="showPopup('cart')"></i>
+              <i class="fa-solid fa-heart icon"></i>
+            </div>
+          </div>
+        </div>
+        <div class = "product" >
+          <a href="product1.html"><img src="../assets/Product Images/azul.png" alt="Catan" class = "productImage"></a>
+          <h2 class = "productCompany">Plan B Games</h2>
+          <a href="product1.html" class="productName"><h2>Azul</h2></a>
+          <div class= "productPriceBundle">
+            <h2 class = "productPrice">$75.00</h2>
+            <div class = "actionIcons">
+              <i class="fa-solid fa-cart-plus icon" onclick="showPopup('cart')"></i>
+              <i class="fa-solid fa-heart icon"></i>
+            </div>
+          </div>
+        </div>
+        <div class = "product" >
+          <a href="product1.html"><img src="../assets/Product Images/ttrEurope.png" alt="Catan" class = "productImage"></a>
+          <h2 class = "productCompany">Days of Wonder</h2>
+          <a href="product1.html" class="productName"><h2>Ticket to Ride Europe</h2></a>
+          <div class= "productPriceBundle">
+            <h2 class = "productPrice">$80.00</h2>
+            <div class = "actionIcons">
+              <i class="fa-solid fa-cart-plus icon" onclick="showPopup('cart')"></i>
+              <i class="fa-solid fa-heart icon"></i>
+            </div>
+          </div>
+        </div>
+        <div class = "product" >
+          <a href="product1.html"><img src="../assets/Product Images/ttrUSA.png" alt="Catan" class = "productImage"></a>
+          <h2 class = "productCompany">Days of Wonder</h2>
+          <a href="product1.html" class="productName"><h2>Ticket to Ride USA</h2></a>
+          <div class= "productPriceBundle">
+            <h2 class = "productPrice">$80.00</h2>
+            <div class = "actionIcons">
+              <i class="fa-solid fa-cart-plus icon" onclick="showPopup('cart')"></i>
+              <i class="fa-solid fa-heart icon"></i>
+            </div>
+          </div>
+        </div>
+        <div class = "product" >
+          <a href="product1.html"><img src="../assets/Product Images/splendor.png" alt="Catan" class = "productImage"></a>
+          <h2 class = "productCompany">Asmodee</h2>
+          <a href="product1.html" class="productName"><h2>Splendor</h2></a>
+          <div class= "productPriceBundle">
+            <h2 class = "productPrice">$80.00</h2>
+            <div class = "actionIcons">
+              <i class="fa-solid fa-cart-plus icon" onclick="showPopup('cart')"></i>
+              <i class="fa-solid fa-heart icon"></i>
+            </div>
+          </div>
+        </div>
+        <div class = "product" >
+          <a href="product1.html"><img src="../assets/Product Images/codenames.png" alt="Catan" class = "productImage"></a>
+          <h2 class = "productCompany">Czech Games</h2>
+          <a href="product1.html" class="productName"><h2>Codenames</h2></a>
+          <div class= "productPriceBundle">
+            <h2 class = "productPrice">$32.00</h2>
+            <div class = "actionIcons">
+              <i class="fa-solid fa-cart-plus icon" onclick="showPopup('cart')"></i>
+              <i class="fa-solid fa-heart icon"></i>
+            </div>
+          </div>
+        </div>
+        <div class = "product" >
+          <a href="product1.html"><img src="../assets/Product Images/explode.png" alt="Catan" class = "productImage"></a>
+          <h2 class = "productCompany">Exploding Kittens</h2>
+          <a href="product1.html" class="productName"><h2>Exploding Kittens</h2></a>
+          <div class= "productPriceBundle">
+            <h2 class = "productPrice">$45.00</h2>
+            <div class = "actionIcons">
+              <i class="fa-solid fa-cart-plus icon" onclick="showPopup('cart')"></i>
+              <i class="fa-solid fa-heart icon"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer id = "footer">
+    <div class = "shippingBundle">
+      <i class="fa-solid fa-truck-fast footerIcon"></i>
+      <h2 class = "shipping">Free shipping on orders over $150</h2>
+    </div>
+    <div class = "footerLinkBundle">
+      <h2 class="footerLink">Privacy Policy</h2>
+      <h2 class="footerLink">Terms of Service</h2>
+      <h2 class="footerLink">Refund Policy</h2>
+    </div>
+    <h3 class="footerText">Copyright © 2022 Gas Games. All Rights Reserved.</h3>
+  </footer>
 </body>
 </html>

@@ -18,6 +18,42 @@ main {
   padding: 1rem;
 }
 
+#filterMenu {
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  /* align-items: center; */
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background-color: #3f3f3f;
+  padding-bottom: 4rem;
+  overflow-y: scroll;
+}
+
+.filterSelect {
+  display: none;
+  justify-content: space-between;
+  color: white;
+  font-size: 1rem;
+  padding: 0.3rem;
+  width: 9.6rem;
+  border-radius: 0.2rem;
+  border: 2px solid white;
+  font-family: myRegularFont;
+  text-decoration: none;
+  /* margin-right: 1rem; */
+}
+
+.gridOptions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
 #innerBox {
   display: flex;
   background-color: #EA9F1C;
@@ -81,6 +117,22 @@ main {
   display: none; /* for Chrome, Safari, and Opera */
 }
 
+.mobileXMarkFilter {
+  color: #EA9F1C;
+  font-size: 3rem;
+  width: 95%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
 .outerBox {
   border: 2px solid white;
   display: flex;
@@ -89,6 +141,35 @@ main {
   width: 1rem;
   height: 1rem;
   border-radius: 0.25rem;
+}
+
+.pageHeader {
+  font-size: 1.5rem;
+  font-family: myBoldFont;
+  color: white;
+}
+
+.pageHeaderCont {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.productInGrid {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background-color: #2D2D2D;
+  border-radius: 0.5rem;
+  width: 11rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  text-decoration: none;
 }
 
 .productGridGroup {
@@ -189,4 +270,127 @@ main {
   font-family: myRegularFont;
   color: white;
   margin-left: 1rem;
+}
+
+.sortHoverMenu {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  top: 2.7rem;
+  right: 2rem;
+  width: 7rem;
+  /* height: 50px; */
+  background-color: #2D2D2D;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  z-index: 2;
+}
+
+.sortHoverMenu h3 {
+  color: white;
+  font-size: 1rem;
+  font-family: myRegularFont;
+  text-decoration: none;
+  margin-top: 0.5rem;
+}
+
+.sortHoverMenu:hover {
+  visibility: visible;
+  opacity: 1;
+}
+
+.sortHoverMenu h3:hover {
+  color: #EA9F1C;
+}
+
+.sortMenu {
+  display: flex;
+  color: white;
+  align-items: center;
+  font-size: 1rem;
+  font-family: myRegularFont;
+  text-decoration: none;
+  margin-right: 2.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.sortMenu:hover {
+  color: #EA9F1C;
+  cursor: pointer;
+}
+
+.sortMenu:hover + .sortHoverMenu{
+  visibility: visible;
+  opacity: 1;
+}
+
+.sortMenu:hover i{
+  transform: rotate(-90deg);
+}
+
+
+@media screen and (max-width: 770px) {
+
+  .filterSelect {
+    display: flex;
+  }
+
+  #leftSideContent {
+    display: none;
+  }
+
+  #leftSideContentSearch {
+    display: none;
+  }
+
+  .pageHeaderCont {
+    flex-direction: column;
+    align-items: unset;
+  }
+
+  .productInGrid {
+    width: 9.5rem;
+    margin-right: 0.3rem;
+  }
+
+  #rightSideContent {
+    padding-top: 5%;
+    /* width: 70%; */
+    height: calc(100vh - 15rem);
+  }
+
+  #rightSideContentSearch {
+    padding-top: 3%;
+    /* width: 70%; */
+    height: calc(100vh - 6rem);
+  }
+
+  .section {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .sortMenu {
+    justify-content: space-between;
+    color: white;
+    font-size: 1rem;
+    padding: 0.3rem;
+    width: 9.6rem;
+    border-radius: 0.2rem;
+    border: 2px solid white;
+    font-family: myRegularFont;
+    text-decoration: none;
+    margin-right: 0.3rem;
+    margin-bottom: 0;
+  }
+
+  .sortHoverMenu {
+    right: 1rem;
+    top: 4.7rem;
+  }
+
 }

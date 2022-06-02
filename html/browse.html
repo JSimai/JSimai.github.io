@@ -14,17 +14,30 @@
 
 <!-- Add question marks to explain categories -->
 <body>
-  <nav id = "navbar">
-    <a href="../index.html"><img src="../assets/ggIcon.webp" alt="GasGamesIcon" class = "ggIcon"></a>
-    <div class = "navIconCont">
-      <i class="fa-solid fa-magnifying-glass navIcon" onclick="toggleSearch()"></i>
-      <i class="fa-solid fa-user-astronaut navIcon" onclick="showPopup('login')"></i>
-      <i class="fa-solid fa-cart-shopping navIcon" onclick="showPopup('cart')"></i>
-    </div>
-  </nav>
+  <div class="desktopNav">
+    <nav id = "navbar">
+      <a href="../index.html"><img src="../assets/ggIcon.webp" alt="GasGamesIcon" class = "ggIcon"></a>
+      <div class = "navIconCont">
+        <i class="fa-solid fa-magnifying-glass navIcon" onclick="toggleSearch()"></i>
+        <i class="fa-solid fa-user-astronaut navIcon" onclick="showPopup('login')"></i>
+        <i class="fa-solid fa-cart-shopping navIcon" onclick="showPopup('cart')"></i>
+      </div>
+    </nav>
+  </div>
+  <div class="mobileNav">
+    <nav id = "navbar">
+      <i class="fa-bars bars" onclick="toggleMobileMenu('mobileMainMenu')"></i>
+      <a href="../index.html"><img src="../assets/ggIcon.webp" alt="GasGamesIcon" class = "ggIcon"></a>
+      <div class = "navIconCont">
+        <i class="fa-solid fa-magnifying-glass navIcon" onclick="toggleSearch()"></i>
+        <i class="fa-solid fa-user-astronaut navIcon" onclick="showPopup('login')"></i>
+        <i class="fa-solid fa-cart-shopping navIcon" onclick="showPopup('cart')"></i>
+      </div>
+    </nav>
+  </div>
   <div id = "browseImageCont">
     <div class = "browseImage">
-      <a href = "categoryHomes/gamesHome.html">
+      <a href = "categoryHomes/gamesHome.html" class="desktopSection">
         <img src="../assets/Catan.jpeg" alt="games">
         <div>
           <h2 class = "subHeader">G</h2>
@@ -34,9 +47,23 @@
           <h2 class = "subHeader">S</h2>
         </div>
       </a>
+      <a class = "mobileSection">
+        <img src="../assets/Catan.jpeg" alt="games">
+        <div>
+          <h2 class = "subHeader">G</h2>
+          <h2 class = "subHeader">A</h2>
+          <h2 class = "subHeader">M</h2>
+          <h2 class = "subHeader">E</h2>
+          <h2 class = "subHeader">S</h2>
+          <button onclick="location.href = 'categoryHomes/gamesHome.html';" class = "exploreBtn">
+            <h1>Explore</h1>
+            <i class="fa-solid fa-chevron-right arrow"></i>
+          </button>
+        </div>
+      </a>
     </div>
     <div class = "browseImage">
-      <a href = "categoryHomes/puzzlesHome.html">
+      <a href = "categoryHomes/puzzlesHome.html" class="desktopSection">
         <img src="../assets/puzzles.jpeg" alt="puzzles">
         <div>
           <h2 class = "subHeader">P</h2>
@@ -48,9 +75,25 @@
           <h2 class = "subHeader">S</h2>
         </div>
       </a>
+      <a class="mobileSection">
+        <img src="../assets/puzzles.jpeg" alt="puzzles">
+        <div>
+          <h2 class = "subHeader">P</h2>
+          <h2 class = "subHeader">U</h2>
+          <h2 class = "subHeader">Z</h2>
+          <h2 class = "subHeader">Z</h2>
+          <h2 class = "subHeader">L</h2>
+          <h2 class = "subHeader">E</h2>
+          <h2 class = "subHeader">S</h2>
+          <button onclick="location.href = 'categoryHomes/puzzlesHome.html';" class = "exploreBtn">
+            <h1>Explore</h1>
+            <i class="fa-solid fa-chevron-right arrow"></i>
+          </button>
+        </div>
+      </a>
     </div>
     <div class = "browseImage">
-      <a href = "categoryHomes/RPGHome.html">
+      <a href = "categoryHomes/RPGHome.html" class="desktopSection">
         <img src="../assets/RPG.png" alt="RPG">
         <div>
           <h2 class = "subHeader">R</h2>
@@ -58,9 +101,21 @@
           <h2 class = "subHeader">G</h2>
         </div>
       </a>
+      <a class="mobileSection">
+        <img src="../assets/RPG.png" alt="RPG">
+        <div>
+          <h2 class = "subHeader">R</h2>
+          <h2 class = "subHeader">P</h2>
+          <h2 class = "subHeader">G</h2>
+          <button onclick="location.href = 'categoryHomes/RPGHome.html';" class = "exploreBtn">
+            <h1>Explore</h1>
+            <i class="fa-solid fa-chevron-right arrow"></i>
+          </button>
+        </div>
+      </a>
     </div>
     <div class = "browseImage">
-      <a href = "categoryHomes/CCGHome.html">
+      <a href = "categoryHomes/CCGHome.html" class="desktopSection">
         <img src="../assets/CCG.png" alt="CCG">
         <div>
           <h2 class = "subHeader">C</h2>
@@ -68,9 +123,21 @@
           <h2 class = "subHeader">G</h2>
         </div>
       </a>
+      <a class="mobileSection">
+        <img src="../assets/CCG.png" alt="CCG">
+        <div>
+          <h2 class = "subHeader">C</h2>
+          <h2 class = "subHeader">C</h2>
+          <h2 class = "subHeader">G</h2>
+          <button onclick="location.href = 'categoryHomes/CCGHome.html';" class = "exploreBtn">
+            <h1>Explore</h1>
+            <i class="fa-solid fa-chevron-right arrow"></i>
+          </button>
+        </div>
+      </a>
     </div>
     <div class = "browseImage">
-      <a href = "categoryHomes/materialsHome.html">
+      <a href = "categoryHomes/materialsHome.html" class="desktopSection">
         <img src="../assets/materials.jpeg" alt="materials">
         <div>
           <h2 class = "subHeader">M</h2>
@@ -84,9 +151,27 @@
           <h2 class = "subHeader">S</h2>
         </div>
       </a>
+      <a class="mobileSection">
+        <img src="../assets/materials.jpeg" alt="materials">
+        <div>
+          <h2 class = "subHeader">M</h2>
+          <h2 class = "subHeader">A</h2>
+          <h2 class = "subHeader">T</h2>
+          <h2 class = "subHeader">E</h2>
+          <h2 class = "subHeader">R</h2>
+          <h2 class = "subHeader">I</h2>
+          <h2 class = "subHeader">A</h2>
+          <h2 class = "subHeader">L</h2>
+          <h2 class = "subHeader">S</h2>
+          <button onclick="location.href = 'categoryHomes/materialsHome.html';" class = "exploreBtn">
+            <h1>Explore</h1>
+            <i class="fa-solid fa-chevron-right arrow"></i>
+          </button>
+        </div>
+      </a>
     </div>
     <div class = "browseImage">
-      <a href = "categoryHomes/collectablesHome.html">
+      <a href = "categoryHomes/collectablesHome.html" class="desktopSection">
         <img src="../assets/jewellery.webp" alt="collectables">
         <div>
           <h2 class = "subHeader">C</h2>
@@ -101,6 +186,27 @@
           <h2 class = "subHeader">L</h2>
           <h2 class = "subHeader">E</h2>
           <h2 class = "subHeader">S</h2>
+        </div>
+      </a>
+      <a class="mobileSection">
+        <img src="../assets/jewellery.webp" alt="collectables">
+        <div>
+          <h2 class = "subHeader">C</h2>
+          <h2 class = "subHeader">O</h2>
+          <h2 class = "subHeader">L</h2>
+          <h2 class = "subHeader">L</h2>
+          <h2 class = "subHeader">E</h2>
+          <h2 class = "subHeader">C</h2>
+          <h2 class = "subHeader">T</h2>
+          <h2 class = "subHeader">A</h2>
+          <h2 class = "subHeader">B</h2>
+          <h2 class = "subHeader">L</h2>
+          <h2 class = "subHeader">E</h2>
+          <h2 class = "subHeader">S</h2>
+          <button onclick="location.href = 'categoryHomes/collectablesHome.html';" class = "exploreBtn">
+            <h1>Explore</h1>
+            <i class="fa-solid fa-chevron-right arrow"></i>
+          </button>
         </div>
       </a>
     </div>
@@ -204,6 +310,27 @@
         <i class="fa-solid fa-search"></i>
       </a>
     </div>
+  </div>
+  <div id = "mobileMainMenu">
+    <i class="fa-solid fa-xmark mobileXMark" onclick="toggleMobileMenu('mobileMainMenu')"></i>
+    <a class = "mobileBrowseMenu" style="margin-top: 3rem;" onclick="toggleMobileMenu('mobileBrowseMenuScreen')">
+      <h2>Browse</h2>
+      <i class="fa-solid fa-chevron-right arrow"></i>
+    </a>
+    <a href="inspo.html"><h2>Find Inspo</h2></a>
+    <a><h2>Publishers</h2></a>
+    <a><h2>About Us</h2></a>
+    <a><h2>Contact</h2></a>
+  </div>
+  <div id = "mobileBrowseMenuScreen">
+    <i class="fa-solid fa-chevron-left mobileXMark" style="color: rgba(255,255,255,0.3);" onclick="toggleMobileMenu('mobileBrowseMenuScreen')"></i>
+    <a href="browse.html" style="margin-top: 3rem;"><h2>Home</h2></a>
+    <a href="categoryHomes/gamesHome.html"><h2>Games</h2></a>
+    <a href="categoryHomes/puzzlesHome.html"><h2>Puzzles</h2></a>
+    <a href="categoryHomes/RPGHome.html"><h2>RPG</h2></a>
+    <a href="categoryHomes/CCGHome.html"><h2>CCG</h2></a>
+    <a href="categoryHomes/materialsHome.html"><h2>Materials</h2></a>
+    <a href="categoryHomes/collectablesHome.html" style="margin-bottom: 2rem;"><h2>Collectables</h2></a>
   </div>
 </body>
 </html>

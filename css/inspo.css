@@ -3,3 +3,66 @@ body {
   background: #3f3f3f;
 }
 
+main {
+  margin-top: 5rem;
+}
+
+.guide {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 13rem;
+  max-width: 13rem;
+  background-image: linear-gradient(to right, rgba(0,0,0,0) 35%, #2d2d2d 10%);
+  border-radius: 5%;
+  padding-right: 0.5rem;
+  margin-right: 1.5rem;
+}
+
+.guideFirst {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 13rem;
+  max-width: 13rem;
+  background-image: linear-gradient(to right, rgba(0,0,0,0) 35%, #2d2d2d 10%);
+  border-radius: 5%;
+  padding-right: 0.5rem;
+  margin-right: 1.5rem;
+  margin-left: 2rem;
+}
+
+.guideImage {
+  height: 8rem;
+  width: auto;
+}
+
+.guideText {
+  display: flex;
+  text-align: center;
+}
+
+.tvImage {
+  height: 12rem;
+  width: auto;
+  margin-right: 1.5rem;
+}
+
+.tvImageFirst {
+  height: 12rem;
+  width: auto;
+  margin-right: 1.5rem;
+  margin-left: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+
+  .guideFirst {
+    margin-left: 1rem;
+  }
+
+  .tvImageFirst {
+    margin-left: 1rem;
+  }
+}
+

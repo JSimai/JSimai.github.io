@@ -48,7 +48,7 @@ h3 {
 
 #backBox {
   display: none;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
@@ -57,6 +57,29 @@ h3 {
   opacity: 0.7;
   cursor: pointer;
   z-index: 3;
+}
+
+.bars {
+  display: none;
+  color: #fff;
+  font-size: 2rem;
+  padding-left: 1.2rem;
+  -webkit-font-smoothing: antialiased;
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
+
+.bars1 {
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.browseMenu {
+  margin-left: 2.2rem;
 }
 
 .browseMenu:hover + .hoverMenu{
@@ -98,7 +121,17 @@ h3 {
   background-color: #3f3f3f;
   box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.6);
   transform: translateX(200%);
-  z-index: 2;
+  z-index: 4;
+}
+
+.cartCont {
+  padding: 2rem;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
 }
 
 #catNavMenu {
@@ -125,19 +158,21 @@ h3 {
   margin-right: 2.8rem;
 }
 
+#catNavMenu h1 {
+  font-family: myRegularFont;
+  font-size: 1rem;
+  color: white;
+  margin-left: 1rem;
+}
+
 #catNavMenu a:hover {
   color: #EA9F1C;
   cursor: pointer;
 }
 
-.cartCont {
-  padding: 2rem;
-}
-
-.cartItem {
-  display: flex;
+.catNavMenuMobCont {
+  display: none; 
   align-items: center;
-  padding-top: 2rem;
 }
 
 .contShop {
@@ -181,6 +216,7 @@ h3 {
   font-size: 1.2rem;
   font-family: myBoldFont;
   text-decoration: none;
+  text-align: center;
 }
 
 .footerLinkBundle {
@@ -193,6 +229,7 @@ h3 {
   color: white;
   font-size: 1rem;
   font-family: myRegularFont;
+  text-align: center;
 }
 
 .form {
@@ -206,6 +243,7 @@ h3 {
   object-fit: cover;
   width: 60px;
   height: 60px;
+  padding-left: 2rem;
 }
 
 #greeting {
@@ -329,12 +367,114 @@ h3 {
   background-color: #3f3f3f;
   box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.6);
   transform: translateX(200%);
-  z-index: 2;
+  z-index: 4;
 }
 
-/* #loginCont {
-  display: block;
-} */
+.mobileBrowseMenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#mobileBrowseMenuScreen {
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  background-color: #3f3f3f;
+  overflow-y: scroll;
+  padding-bottom: 4rem;
+}
+
+#mobileBrowseMenuScreen a {
+  color: white;
+  font-size: 2rem;
+  font-family: myRegularFont;
+  text-decoration: none;
+  margin-top: 4rem;
+  width: 80%;
+}
+
+.mobileCatHeader {
+  display: flex;
+  width: 80%;
+  margin-top: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobileCatHeader h1 {
+  font-size: 2rem;
+  font-family: myBoldFont;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+#mobileCatMenu {
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background-color: #3f3f3f;
+  overflow-y: scroll;
+  padding-bottom: 4rem;
+}
+
+#mobileCatMenu a {
+  color: white;
+  font-size: 2rem;
+  font-family: myRegularFont;
+  text-decoration: none;
+  margin-top: 5rem;
+  width: 80%;
+}
+
+#mobileMainMenu {
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background-color: #3f3f3f;
+  overflow-y: scroll;
+  padding-bottom: 4rem;
+}
+
+#mobileMainMenu a {
+  color: white;
+  font-size: 2rem;
+  font-family: myRegularFont;
+  text-decoration: none;
+  margin-top: 5rem;
+  width: 80%;
+}
+
+.mobileXMark {
+  color: #EA9F1C;
+  font-size: 3rem;
+  width: 80%;
+  display: flex;
+  justify-content: end;
+  margin-top: 2rem;
+}
+
+.mobileXMarkCat {
+  color: #EA9F1C;
+  font-size: 3rem;
+}
 
 .navBack {
   background-color: #2D2D2D;
@@ -344,16 +484,16 @@ h3 {
 
 #navbar {
   display: flex;
-  width: 100%;
+  width: 100vw;
   height: 2rem;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding-top: 2rem;
-  padding-left: 2rem;
-  /* position: sticky;
-  background-color: #EA9F1C;
-  top: 0;
+  /* padding-left: 2rem; */
+  /* position: sticky; */
+  /* background-color: #EA9F1C; */
+  /* top: 0;
   left: 0; */
 }
 
@@ -375,7 +515,7 @@ h3 {
   justify-content: flex-end;
   align-items: center;
   width: 80%;
-  margin-right: 4rem;
+  margin-right: 2rem;
 }
 
 .navImg {
@@ -392,7 +532,7 @@ h3 {
 
 #navMenu {
   display: flex;
-  margin-left: 2.2rem;
+  /* padding-left: 2.2rem; */
   margin-top: 2rem;
   width: 100%;
 }
@@ -466,11 +606,26 @@ h3 {
   width: 100%;
 }
 
+.productFirst {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background-color: #2D2D2D;
+  border-radius: 0.5rem;
+  width: 11rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  margin-right: 1rem;
+  margin-left: 2rem;
+  text-decoration: none;
+}
+
 .productGroup {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   margin-top: 1rem;
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
@@ -529,7 +684,7 @@ h3 {
   border-radius: 0.5rem;
   top: 0;
   right: 0;
-  z-index: 2;
+  z-index: 1;
 }
 
 .salePrice {
@@ -551,8 +706,9 @@ h3 {
   width: 100vw;
   height: 5rem;
   background-color: #2D2D2D;
-  padding: 0.5rem;
-  position: absolute;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 3;
@@ -663,3 +819,51 @@ h3 {
   transform: scale(0.95);
   border: 2px solid #EA9F1C;
 }
+
+@media screen and (max-width: 600px) {
+  .bars {
+    display: flex;
+  }
+
+  #catNavMenu {
+    height: 2rem;
+    padding-left: 1.2rem;
+  }
+  
+  #catNavMenu a{
+    display: none;
+  }
+
+  .catNavMenuMobCont {
+    display: flex; 
+  }
+
+  .ggIcon {
+    padding-left: 1.2rem;
+  }
+
+  .groupTitle {
+    padding-left: 1rem;
+  }
+
+  .navIcon {
+    margin-left: 12%;
+  }
+
+  .navIconCont {
+    margin-right: 1rem;
+  }
+
+  .navImg {
+    height: 12rem;
+  }
+
+  #navMenu {
+    display: none;
+  }
+
+  .productFirst {
+    margin-left: 1rem;
+  }
+}
+  

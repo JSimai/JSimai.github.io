@@ -170,3 +170,9 @@
 ::-webkit-calendar-picker-indicator {
   filter: invert(1);
 }
+
+@media screen and (max-width: 600px) {
+  .payments {
+    width: 50%;
+  }
+}

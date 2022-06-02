@@ -20,6 +20,15 @@ function toggleSearch() {
   }
 }
 
+function toggleMobileMenu (id) {
+  var menu = document.getElementById(id);
+  if (menu.style.display === "none") {
+    menu.style.display = "flex";
+  } else {
+    menu.style.display = "none";
+  }
+}
+
 function handleForm() {
   var form = document.getElementById("loginCont");
   var greeting = document.getElementById("greeting");

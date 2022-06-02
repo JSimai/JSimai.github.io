@@ -14,6 +14,7 @@
 <body>
   <div class="navBack">
     <nav id = "navbar">
+      <i class="fa-bars bars" onclick="toggleMobileMenu('mobileMainMenu')"></i>
       <a href="../index.html"><img src="../assets/ggIcon.webp" alt="GasGamesIcon" class = "ggIcon"></a>
       <div class = "navIconCont">
         <i class="fa-solid fa-magnifying-glass navIcon" onclick="toggleSearch()"></i>
@@ -141,6 +142,139 @@
       </a>
     </div>
   </div>
+  <div id = "mobileMainMenu">
+    <i class="fa-solid fa-xmark mobileXMark" onclick="toggleMobileMenu('mobileMainMenu')"></i>
+    <a class = "mobileBrowseMenu" style="margin-top: 3rem;" onclick="toggleMobileMenu('mobileBrowseMenuScreen')">
+      <h2>Browse</h2>
+      <i class="fa-solid fa-chevron-right arrow"></i>
+    </a>
+    <a href="inspo.html"><h2>Find Inspo</h2></a>
+    <a><h2>Publishers</h2></a>
+    <a><h2>About Us</h2></a>
+    <a><h2>Contact</h2></a>
+  </div>
+  <div id = "mobileBrowseMenuScreen">
+    <i class="fa-solid fa-chevron-left mobileXMark" style="color: rgba(255,255,255,0.3);" onclick="toggleMobileMenu('mobileBrowseMenuScreen')"></i>
+    <a href="browse.html" style="margin-top: 3rem;"><h2>Home</h2></a>
+    <a href="categoryHomes/gamesHome.html"><h2>Games</h2></a>
+    <a href="categoryHomes/puzzlesHome.html"><h2>Puzzles</h2></a>
+    <a href="categoryHomes/RPGHome.html"><h2>RPG</h2></a>
+    <a href="categoryHomes/CCGHome.html"><h2>CCG</h2></a>
+    <a href="categoryHomes/materialsHome.html"><h2>Materials</h2></a>
+    <a href="categoryHomes/collectablesHome.html" style="margin-bottom: 2rem;"><h2>Collectables</h2></a>
+  </div>
+  <div id = "filterMenu">
+    <i class="mobileXMarkFilter fa-xmark " onclick="toggleMobileMenu('filterMenu')"></i>
+    <div class="section" style="padding-top: 0rem; padding-bottom: 1.7rem;">
+      <div class="sectionHeaderCont">
+        <h1 class="sectionHeader" style="margin-bottom: 0.5rem;">Filter By</h1>
+      </div>
+      <div id="selectedFilter">
+        <h3>Strategy</h3>
+        <i class="fa-solid fa-xmark" style="font-size: 1.2rem;"></i>
+      </div>
+      <div id="selectedFilter1">
+        <h3>Party</h3>
+        <i class="fa-solid fa-xmark" style="font-size: 1.2rem;"></i>
+      </div>
+      <div id="selectedFilter2">
+        <h3>Family</h3>
+        <i class="fa-solid fa-xmark" style="font-size: 1.2rem;"></i>
+      </div>
+      <div id="selectedFilter3">
+        <h3>Cards</h3>
+        <i class="fa-solid fa-xmark" style="font-size: 1.2rem;"></i>
+      </div>
+      <div id="selectedFilter4">
+        <h3>Dice</h3>
+        <i class="fa-solid fa-xmark" style="font-size: 1.2rem;"></i>
+      </div>
+    </div>
+    <div class="section">
+      <div class="sectionHeaderCont">
+        <h1 class="sectionHeader">Category</h1>
+        <i class="fa-solid fa-chevron-down" style="font-size: 1.2rem; padding-bottom: 0.4rem;"></i>
+      </div>
+      <div class="selection" onclick="select('innerBox', 'selectedFilter')">
+        <div class="boxes">
+          <div class="outerBox"><div id="innerBox"></div></div>
+          <h2 class="selectionText">Strategy</h2>
+        </div>
+        <h3>(35)</h3>
+      </div>
+      <div class="selection" onclick="select('innerBox1', 'selectedFilter1')">
+        <div class="boxes">
+          <div class="outerBox"><div id="innerBox1"></div></div>
+          <h2 class="selectionText">Party</h2>
+        </div>
+        <h3>(20)</h3>
+      </div>
+      <div class="selection" onclick="select('innerBox2', 'selectedFilter2')">
+        <div class="boxes">
+          <div class="outerBox"><div id="innerBox2"></div></div>
+          <h2 class="selectionText">Family</h2>
+        </div>
+        <h3>(18)</h3>
+      </div>
+      <div class="selection" onclick="select('innerBox3', 'selectedFilter3')">
+        <div class="boxes">
+          <div class="outerBox"><div id="innerBox3"></div></div>
+          <h2 class="selectionText">Cards</h2>
+        </div>
+        <h3>(46)</h3>
+      </div>
+      <div class="selection" onclick="select('innerBox4', 'selectedFilter4')">
+        <div class="boxes">
+          <div class="outerBox"><div id="innerBox4"></div></div>
+          <h2 class="selectionText">Dice</h2>
+        </div>
+        <h3>(12)</h3>
+      </div>
+    </div>
+    <div class="section">
+      <div class="sectionHeaderCont">
+        <h1 class="sectionHeader">Publisher</h1>
+        <i class="fa-solid fa-chevron-left" style="font-size: 1.2rem; padding-bottom: 0.4rem;"></i>
+      </div>
+    </div>
+    <div class="section">
+      <div class="sectionHeaderCont">
+        <h1 class="sectionHeader">Players</h1>
+        <i class="fa-solid fa-chevron-left" style="font-size: 1.2rem; padding-bottom: 0.4rem;"></i>
+      </div>
+    </div>
+    <div class="section">
+      <div class="sectionHeaderCont">
+        <h1 class="sectionHeader">Price</h1>
+        <i class="fa-solid fa-chevron-left" style="font-size: 1.2rem; padding-bottom: 0.4rem;"></i>
+      </div>
+    </div>
+    <div class="section">
+      <div class="sectionHeaderCont">
+        <h1 class="sectionHeader">Stock Status</h1>
+        <i class="fa-solid fa-chevron-left" style="font-size: 1.2rem; padding-bottom: 0.4rem;"></i>
+      </div>
+    </div>
+    <div class="section">
+      <div class="sectionHeaderCont">
+        <h1 class="sectionHeader">Play Time</h1>
+        <i class="fa-solid fa-chevron-left" style="font-size: 1.2rem; padding-bottom: 0.4rem;"></i>
+      </div>
+    </div>
+    <div class="section">
+      <div class="sectionHeaderCont">
+        <h1 class="sectionHeader">Theme</h1>
+        <i class="fa-solid fa-chevron-left" style="font-size: 1.2rem; padding-bottom: 0.4rem;"></i>
+      </div>
+    </div>
+    <div class="section">
+      <div class="sectionHeaderCont">
+        <h1 class="sectionHeader">Age Group</h1>
+        <i class="fa-solid fa-chevron-left" style="font-size: 1.2rem; padding-bottom: 0.4rem;"></i>
+      </div>
+    </div>
+  </div>
+
   <main>
     <div id="leftSideContentSearch">
       <div id="filterBar">
@@ -255,8 +389,31 @@
       </div>
     </div>
     <div id="rightSideContentSearch">
+      <div class="pageHeaderCont">
+        <h1 class = "pageHeader">Search Results</h1>
+        <div class = "gridOptions">
+          <div class = "filterSelect" onclick="toggleMobileMenu('filterMenu')">
+            <h2>Filters</h2>
+            <i class="fa-solid fa-filter arrow"></i>
+          </div>
+          <div class = "sortMenu">
+            <h2>Best Selling</h2>
+            <i class="fa-solid fa-chevron-left arrow"></i>
+          </div>
+          <div class="sortHoverMenu">
+            <h3>Best Selling</h3>
+            <h3>Featured</h3>
+            <h3>Price: Low - High</h3>
+            <h3>Price: High - Low</h3>
+            <h3>Title: A - Z</h3>
+            <h3>Title: Z - A</h3>
+            <h3>Date: New - Old</h3>
+            <h3>Date: Old - New</h3>
+          </div>
+        </div>
+      </div>
       <div class = "productGridGroup">
-        <div class = "product" style="margin-bottom: 1.5rem;">
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;">
           <a href="product1.html"><img src="../../assets/Product Images/catanProduct.webp" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">Catan Studio</h2>
           <a href="product1.html" class="productName"><h2>Settlers of Catan: Explorers and Pirates</h2></a>
@@ -268,7 +425,7 @@
             </div>
           </div>
         </div>
-        <div class = "product" style="margin-bottom: 1.5rem;" >
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;" >
           <a href="product2.html"><img src="../../assets/Product Images/wingpsan.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">Stonemaier Games</h2>
           <a href="product2.html" class="productName"><h2>Wingspan</h2></a>
@@ -284,7 +441,7 @@
             <h2 class="salePrice">Was: $110.00</h2>
           </div>
         </div>
-        <div class = "product" style="margin-bottom: 1.5rem;" >
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;" >
           <a href="product1.html"><img src="../../assets/Product Images/arnak.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">Czech Games</h2>
           <a href="product1.html" class="productName"><h2>Lost Ruins of Arnak</h2></a>
@@ -296,7 +453,7 @@
             </div>
           </div>
         </div>
-        <div class = "product" style="margin-bottom: 1.5rem;" >
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;" >
           <a href="product1.html"><img src="../../assets/Product Images/dixit.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">Asmodee</h2>
           <a href="product1.html" class="productName"><h2>Dixit</h2></a>
@@ -308,7 +465,7 @@
             </div>
           </div>
         </div>
-        <div class = "product" style="margin-bottom: 1.5rem;" >
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;" >
           <a href="product1.html"><img src="../../assets/Product Images/azul.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">Plan B Games</h2>
           <a href="product1.html" class="productName"><h2>Azul</h2></a>
@@ -320,7 +477,7 @@
             </div>
           </div>
         </div>
-        <div class = "product" style="margin-bottom: 1.5rem;" >
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;" >
           <a href="product1.html"><img src="../../assets/Product Images/ttrEurope.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">Days of Wonder</h2>
           <a href="product1.html" class="productName"><h2>Ticket to Ride Europe</h2></a>
@@ -332,7 +489,7 @@
             </div>
           </div>
         </div>
-        <div class = "product" style="margin-bottom: 1.5rem;" >
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;" >
           <a href="product1.html"><img src="../../assets/Product Images/ttrUSA.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">Days of Wonder</h2>
           <a href="product1.html" class="productName"><h2>Ticket to Ride USA</h2></a>
@@ -344,7 +501,7 @@
             </div>
           </div>
         </div>
-        <div class = "product" style="margin-bottom: 1.5rem;" >
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;" >
           <a href="product1.html"><img src="../../assets/Product Images/splendor.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">Asmodee</h2>
           <a href="product1.html" class="productName"><h2>Splendor</h2></a>
@@ -356,7 +513,7 @@
             </div>
           </div>
         </div>
-        <div class = "product" style="margin-bottom: 1.5rem;" >
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;" >
           <a href="product1.html"><img src="../../assets/Product Images/codenames.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">Czech Games</h2>
           <a href="product1.html" class="productName"><h2>Codenames</h2></a>
@@ -368,7 +525,7 @@
             </div>
           </div>
         </div>
-        <div class = "product" style="margin-bottom: 1.5rem;" >
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;" >
           <a href="product1.html"><img src="../../assets/Product Images/explode.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">Exploding Kittens</h2>
           <a href="product1.html" class="productName"><h2>Exploding Kittens</h2></a>
@@ -380,7 +537,7 @@
             </div>
           </div>
         </div>
-        <div class = "product" style="margin-bottom: 1.5rem;" >
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;" >
           <a href="product1.html"><img src="../../assets/Product Images/cardsagainst.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">Cards Against Humanity</h2>
           <a href="product1.html" class="productName"><h2>Cards Against Humanity: Australian Edition</h2></a>
@@ -392,7 +549,7 @@
             </div>
           </div>
         </div>
-        <div class = "product" style="margin-bottom: 1.5rem;" >
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;" >
           <a href="product1.html"><img src="../../assets/Product Images/throw.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">Exploding Kittens</h2>
           <a href="product1.html" class="productName"><h2>Throw Throw Burrito</h2></a>
@@ -404,7 +561,7 @@
             </div>
           </div>
         </div>
-        <div class = "product" style="margin-bottom: 1.5rem;" >
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;" >
           <a href="product1.html"><img src="../../assets/Product Images/poet.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">Exploding Kittens</h2>
           <a href="product1.html" class="productName"><h2>Poetry For Neanderthals</h2></a>
@@ -416,7 +573,7 @@
             </div>
           </div>
         </div>
-        <div class = "product" style="margin-bottom: 1.5rem;" >
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;" >
           <a href="product1.html"><img src="../../assets/Product Images/taco.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">Blue Orange</h2>
           <a href="product1.html" class="productName"><h2>Taco Cat Goat Cheese Pizza</h2></a>
@@ -428,7 +585,7 @@
             </div>
           </div>
         </div>
-        <div class = "product" style="margin-bottom: 1.5rem;" >
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;" >
           <a href="product1.html"><img src="../../assets/Product Images/unstable.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">Unstable Games</h2>
           <a href="product1.html" class="productName"><h2>Unstable Unicorns</h2></a>
@@ -440,7 +597,7 @@
             </div>
           </div>
         </div>
-        <div class = "product" style="margin-bottom: 1.5rem;" >
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;" >
           <a href="product1.html"><img src="../../assets/Product Images/anomia.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">Everest Toys</h2>
           <a href="product1.html" class="productName"><h2>Anomia</h2></a>
@@ -452,7 +609,7 @@
             </div>
           </div>
         </div>
-        <div class = "product" style="margin-bottom: 1.5rem;" >
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;" >
           <a href="product1.html"><img src="../../assets/Product Images/badpeople.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">DYCE</h2>
           <a href="product1.html" class="productName"><h2>Bad People Base Game</h2></a>
@@ -464,7 +621,7 @@
             </div>
           </div>
         </div>
-        <div class = "product" style="margin-bottom: 1.5rem;" >
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;" >
           <a href="product1.html"><img src="../../assets/Product Images/nightube.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">Lagoon Group</h2>
           <a href="product1.html" class="productName"><h2>Complete Games Night Tube</h2></a>
@@ -476,7 +633,7 @@
             </div>
           </div>
         </div>
-        <div class = "product" style="margin-bottom: 1.5rem;" >
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;" >
           <a href="product1.html"><img src="../../assets/Product Images/refresh.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">Big Potato Games</h2>
           <a href="product1.html" class="productName"><h2>Don't Get Got Refresh</h2></a>
@@ -488,7 +645,7 @@
             </div>
           </div>
         </div>
-        <div class = "product" style="margin-bottom: 1.5rem;" >
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;" >
           <a href="product1.html"><img src="../../assets/Product Images/dignity.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">Two Point Oh Games</h2>
           <a href="product1.html" class="productName"><h2>Drawing Without Dignity</h2></a>
@@ -500,7 +657,7 @@
             </div>
           </div>
         </div>
-        <div class = "product" style="margin-bottom: 1.5rem;" >
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;" >
           <a href="product1.html"><img src="../../assets/Product Images/monarchs.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">Theory 11</h2>
           <a href="product1.html" class="productName"><h2>Monarchs Navy Blue Gold</h2></a>
@@ -512,7 +669,7 @@
             </div>
           </div>
         </div>
-        <div class = "product" style="margin-bottom: 1.5rem;" >
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;" >
           <a href="product1.html"><img src="../../assets/Product Images/jacks.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">Jacks Poker</h2>
           <a href="product1.html" class="productName"><h2>Jacks Signature Playing Cards Gold</h2></a>
@@ -524,7 +681,7 @@
             </div>
           </div>
         </div>
-        <div class = "product" style="margin-bottom: 1.5rem;" >
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;" >
           <a href="product1.html"><img src="../../assets/Product Images/withgold.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">Chessex</h2>
           <a href="product1.html" class="productName"><h2>RPG Dice Set Nebula Oceanic with Gold</h2></a>
@@ -536,7 +693,7 @@
             </div>
           </div>
         </div>
-        <div class = "product" style="margin-bottom: 1.5rem;" >
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;" >
           <a href="product1.html"><img src="../../assets/Product Images/koi.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">Bicycle</h2>
           <a href="product1.html" class="productName"><h2>Bicycle Koi Playing Cards</h2></a>
@@ -548,7 +705,7 @@
             </div>
           </div>
         </div>
-        <div class = "product" style="margin-bottom: 1.5rem;" >
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;" >
           <a href="product1.html"><img src="../../assets/Product Images/withwhite.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">Chessex</h2>
           <a href="product1.html" class="productName"><h2>RPG Dice Set Nebula Black with White</h2></a>
@@ -560,7 +717,7 @@
             </div>
           </div>
         </div>
-        <div class = "product" style="margin-bottom: 1.5rem;" >
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;" >
           <a href="product1.html"><img src="../../assets/Product Images/d19.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">Chessex</h2>
           <a href="product1.html" class="productName"><h2>Assorted D10 Dice</h2></a>
@@ -572,7 +729,7 @@
             </div>
           </div>
         </div>
-        <div class = "product" style="margin-bottom: 1.5rem;" >
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;" >
           <a href="product1.html"><img src="../../assets/Product Images/d12.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">Chessex</h2>
           <a href="product1.html" class="productName"><h2>Assorted D12 Dice</h2></a>
@@ -584,7 +741,7 @@
             </div>
           </div>
         </div>
-        <div class = "product" style="margin-bottom: 1.5rem;" >
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;" >
           <a href="product1.html"><img src="../../assets/Product Images/distilled.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">Bicycle</h2>
           <a href="product1.html" class="productName"><h2>Bicycle Distilled Top Shelf Playing Cards</h2></a>
@@ -596,7 +753,7 @@
             </div>
           </div>
         </div>
-        <div class = "product" style="margin-bottom: 1.5rem;" >
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;" >
           <a href="product1.html"><img src="../../assets/Product Images/withinlay.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">The Dice Smith</h2>
           <a href="product1.html" class="productName"><h2>RPG Metal Dice Set Chromatic White Inlay</h2></a>
@@ -608,7 +765,7 @@
             </div>
           </div>
         </div>
-        <div class = "product" style="margin-bottom: 1.5rem;" >
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;" >
           <a href="product1.html"><img src="../../assets/Product Images/starwars.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">Theory 11</h2>
           <a href="product1.html" class="productName"><h2>Star Wars Light Side Silver Special Playing Cards</h2></a>
@@ -620,7 +777,7 @@
             </div>
           </div>
         </div>
-        <div class = "product" style="margin-bottom: 1.5rem;" >
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;" >
           <a href="product1.html"><img src="../../assets/Product Images/starwars.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">Theory 11</h2>
           <a href="product1.html" class="productName"><h2>Star Wars Light Side Silver Special Playing Cards</h2></a>
@@ -632,7 +789,7 @@
             </div>
           </div>
         </div>
-        <div class = "product" style="margin-bottom: 1.5rem;" >
+        <div class = "productInGrid" style="margin-bottom: 1.5rem;" >
           <a href="product1.html"><img src="../../assets/Product Images/starwars.png" alt="Catan" class = "productImage"></a>
           <h2 class = "productCompany">Theory 11</h2>
           <a href="product1.html" class="productName"><h2>Star Wars Light Side Silver Special Playing Cards</h2></a>

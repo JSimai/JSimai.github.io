@@ -14,6 +14,7 @@
 <body>
   <div class="navBack">
     <nav id = "navbar">
+      <i class="fa-bars bars" onclick="toggleMobileMenu('mobileMainMenu')"></i>
       <a href="../../index.html"><img src="../../assets/ggIcon.webp" alt="GasGamesIcon" class = "ggIcon"></a>
       <div class = "navIconCont">
         <i class="fa-solid fa-magnifying-glass navIcon" onclick="toggleSearch()"></i>
@@ -140,6 +141,164 @@
       </a>
     </div>
   </div>
+  <div id = "mobileMainMenu">
+    <i class="fa-solid fa-xmark mobileXMark" onclick="toggleMobileMenu('mobileMainMenu')"></i>
+    <a class = "mobileBrowseMenu" style="margin-top: 3rem;" onclick="toggleMobileMenu('mobileBrowseMenuScreen')">
+      <h2>Browse</h2>
+      <i class="fa-solid fa-chevron-right arrow"></i>
+    </a>
+    <a href="inspo.html"><h2>Find Inspo</h2></a>
+    <a><h2>Publishers</h2></a>
+    <a><h2>About Us</h2></a>
+    <a><h2>Contact</h2></a>
+  </div>
+  <div id = "mobileBrowseMenuScreen">
+    <i class="fa-solid fa-chevron-left mobileXMark" style="color: rgba(255,255,255,0.3);" onclick="toggleMobileMenu('mobileBrowseMenuScreen')"></i>
+    <a href="browse.html" style="margin-top: 3rem;"><h2>Home</h2></a>
+    <a href="categoryHomes/gamesHome.html"><h2>Games</h2></a>
+    <a href="categoryHomes/puzzlesHome.html"><h2>Puzzles</h2></a>
+    <a href="categoryHomes/RPGHome.html"><h2>RPG</h2></a>
+    <a href="categoryHomes/CCGHome.html"><h2>CCG</h2></a>
+    <a href="categoryHomes/materialsHome.html"><h2>Materials</h2></a>
+    <a href="categoryHomes/collectablesHome.html" style="margin-bottom: 2rem;"><h2>Collectables</h2></a>
+  </div>
+  <div id = "mobileDescription">
+    <div class = "outsideBox" onclick="toggleMobileMenu('mobileDescription')">
+      <div class = "insideBox">
+        <div class="section">
+          <h1 class = "sectionHeader">Description</h1>
+          <h3>A super fun expansion to the classic hit Settler's of Catan! Explore the seas, fight pirates, and claim dominion over your land!</h3>
+          <br>
+          <h3>Play through six new scenarios in an epic sequence or on their own.</h3>
+          <br>
+          <h3>The 5-6 player version is also available for extra fun with more friends and family!</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id = "mobileProductDetails">
+    <div class = "outsideBox" onclick="toggleMobileMenu('mobileProductDetails')">
+      <div class = "insideBox">
+        <div class="section">
+          <h1 class = "sectionHeader">Product Details</h1>
+          <h3>Product Code:</h3>
+          <h3>21403869</h3>
+          <br> 
+          <h3>Barcode: </h3>
+          <h3>029877030699</h3>
+          <br> 
+          <h3>Publisher: </h3>
+          <h3>Asmodee</h3>
+          <br> 
+          <h3>Brand: </h3>
+          <h3>Catan</h3>
+          <br>
+          <h3>Playtime: </h3>
+          <h3>90-120 minutes</h3>
+          <br>
+          <h3>Recommended Age: </h3>
+          <h3>12+</h3>
+          <br>
+          <h3>Number of Players: </h3>
+          <h3>2-4</h3>
+          <br>
+          <h3>Themes: </h3>
+          <h3>Medieval</h3>
+          <br>
+          <h3>Board Game Mechanics: </h3>
+          <h3>Dice Rolling | Hand Management | Modular Board | Network Building | Trading</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id = "mobileReviews">
+    <div class = "outsideBox" onclick="toggleMobileMenu('mobileReviews')">
+      <div class = "insideBox">
+        <div class="section">
+          <h1 class = "sectionHeader">Reviews</h1>
+          <div class="reviewInstance" style="margin-top: 1rem;">
+            <h2 class="reviewName">John McCain</h2>
+            <div class = "rating" style="margin-top: 0.5rem;">
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star1"></i>
+              <h3 style="margin-left: 0.5rem;">12/08/22</h3>
+            </div>
+            <h2 class="reviewTitle">Such a great game, but...</h2>
+            <h3>Would be 5 stars but the expansion itself doesn't add enough to warrant the price. Needs a few more things.</h3>
+          </div>
+          <div class="reviewInstance">
+            <h2 class="reviewName">Gary Lyon</h2>
+            <div class = "rating" style="margin-top: 0.5rem;">
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <h3 style="margin-left: 0.5rem;">01/06/20</h3>
+            </div>
+            <h2 class="reviewTitle">Love Ittttt</h2>
+            <h3>Best expansion yet. And this is my third one!</h3>
+          </div>
+          <div class="reviewInstance" style="margin-top: 1rem;">
+            <h2 class="reviewName">John McCain</h2>
+            <div class = "rating" style="margin-top: 0.5rem;">
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star1"></i>
+              <h3 style="margin-left: 0.5rem;">12/08/22</h3>
+            </div>
+            <h2 class="reviewTitle">Such a great game, but...</h2>
+            <h3>Would be 5 stars but the expansion itself doesn't add enough to warrant the price. Needs a few more things.</h3>
+          </div>
+          <div class="reviewInstance">
+            <h2 class="reviewName">Gary Lyon</h2>
+            <div class = "rating" style="margin-top: 0.5rem;">
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <h3 style="margin-left: 0.5rem;">01/06/20</h3>
+            </div>
+            <h2 class="reviewTitle">Love Ittttt</h2>
+            <h3>Best expansion yet. And this is my third one!</h3>
+          </div>
+          <div class="reviewInstance" style="margin-top: 1rem;">
+            <h2 class="reviewName">John McCain</h2>
+            <div class = "rating" style="margin-top: 0.5rem;">
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star1"></i>
+              <h3 style="margin-left: 0.5rem;">12/08/22</h3>
+            </div>
+            <h2 class="reviewTitle">Such a great game, but...</h2>
+            <h3>Would be 5 stars but the expansion itself doesn't add enough to warrant the price. Needs a few more things.</h3>
+          </div>
+          <div class="reviewInstance">
+            <h2 class="reviewName">Gary Lyon</h2>
+            <div class = "rating" style="margin-top: 0.5rem;">
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <h3 style="margin-left: 0.5rem;">01/06/20</h3>
+            </div>
+            <h2 class="reviewTitle">Love Ittttt</h2>
+            <h3>Best expansion yet. And this is my third one!</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <main>
     <div id = "leftSideContent">
       <div id = "product1Imgs">
@@ -179,6 +338,15 @@
           <button class="btn" onclick="showPopup('cart')" style="width: 50%; margin-left: 2rem;">Add to Cart</button>
           <i class="fa-solid fa-heart icon" style="margin-left: 5%;"></i>
         </div>
+      </div>
+      <div class = "product1Btn" onclick="toggleMobileMenu('mobileDescription')">
+        <h3>Description</h3>
+      </div>
+      <div class = "product1Btn" onclick="toggleMobileMenu('mobileProductDetails')">
+        <h3>Product Details</h3>
+      </div>
+      <div class = "product1Btn" onclick="toggleMobileMenu('mobileReviews')">
+        <h3>Reviews</h3>
       </div>
     </div>
     <div id = "rightSideContent">
@@ -235,7 +403,7 @@
             <h3 style="margin-left: 0.5rem;">12/08/22</h3>
           </div>
           <h2 class="reviewTitle">Such a great game, but...</h2>
-          <h3>HWould be 5 stars but the expansion itself doesn't add enough to warrant the price. Needs a few more things.</h3>
+          <h3>Would be 5 stars but the expansion itself doesn't add enough to warrant the price. Needs a few more things.</h3>
         </div>
         <div class="reviewInstance">
           <h2 class="reviewName">Gary Lyon</h2>

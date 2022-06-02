@@ -14,6 +14,7 @@
 <body>
   <div class="navBack">
     <nav id = "navbar">
+      <i class="fa-bars bars" onclick="toggleMobileMenu('mobileMainMenu')"></i>
       <a href="../../index.html"><img src="../../assets/ggIcon.webp" alt="GasGamesIcon" class = "ggIcon"></a>
       <div class = "navIconCont">
         <i class="fa-solid fa-magnifying-glass navIcon" onclick="toggleSearch()"></i>
@@ -140,6 +141,117 @@
       </a>
     </div>
   </div>
+  <div id = "mobileMainMenu">
+    <i class="fa-solid fa-xmark mobileXMark" onclick="toggleMobileMenu('mobileMainMenu')"></i>
+    <a class = "mobileBrowseMenu" style="margin-top: 3rem;" onclick="toggleMobileMenu('mobileBrowseMenuScreen')">
+      <h2>Browse</h2>
+      <i class="fa-solid fa-chevron-right arrow"></i>
+    </a>
+    <a href="inspo.html"><h2>Find Inspo</h2></a>
+    <a><h2>Publishers</h2></a>
+    <a><h2>About Us</h2></a>
+    <a><h2>Contact</h2></a>
+  </div>
+  <div id = "mobileBrowseMenuScreen">
+    <i class="fa-solid fa-chevron-left mobileXMark" style="color: rgba(255,255,255,0.3);" onclick="toggleMobileMenu('mobileBrowseMenuScreen')"></i>
+    <a href="browse.html" style="margin-top: 3rem;"><h2>Home</h2></a>
+    <a href="categoryHomes/gamesHome.html"><h2>Games</h2></a>
+    <a href="categoryHomes/puzzlesHome.html"><h2>Puzzles</h2></a>
+    <a href="categoryHomes/RPGHome.html"><h2>RPG</h2></a>
+    <a href="categoryHomes/CCGHome.html"><h2>CCG</h2></a>
+    <a href="categoryHomes/materialsHome.html"><h2>Materials</h2></a>
+    <a href="categoryHomes/collectablesHome.html" style="margin-bottom: 2rem;"><h2>Collectables</h2></a>
+  </div>
+  <div id = "mobileDescription">
+    <div class = "outsideBox" onclick="toggleMobileMenu('mobileDescription')">
+      <div class = "insideBox">
+        <div class="section">
+          <h1 class = "sectionHeader">Description</h1>
+          <h3>Wingspan is a competitive, medium-weight, card-driven, engine-building board game from designer Elizabeth Hargrave and Stonemaier Games.</h3>
+          <br>
+          <h3>You are bird enthusiasts—researchers, bird watchers, ornithologists, and collectors—seeking to discover and attract the best birds to your network of wildlife preserves. 
+            Each bird extends a chain of powerful combinations in one of your habitats (actions). These habitats focus on several key aspects of growth:</h3>
+          <br>
+          <h3> - Gain food tokens via custom dice in a birdfeeder dice tower</h3>
+          <h3> - Lay eggs using egg miniatures in a variety of colours</h3>
+          <h3> - Draw from hundreds of unique bird cards and play them</h3>
+          <br>
+          <h3>The winner is the player with the most points after 4 rounds.</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id = "mobileProductDetails">
+    <div class = "outsideBox" onclick="toggleMobileMenu('mobileProductDetails')">
+      <div class = "insideBox">
+        <div class="section">
+          <h1 class = "sectionHeader">Product Details</h1>
+          <h3>Product Code:</h3>
+          <h3>29015889</h3>
+          <br> 
+          <h3>Barcode: </h3>
+          <h3>653341029102</h3>
+          <br> 
+          <h3>Publisher: </h3>
+          <h3>Stonemaier Games</h3>
+          <br> 
+          <h3>Brand: </h3>
+          <h3>Stonemaier Games / Wingspan</h3>
+          <br>
+          <h3>Playtime: </h3>
+          <h3>40-70 minutes</h3>
+          <br>
+          <h3>Recommended Age: </h3>
+          <h3>10+</h3>
+          <br>
+          <h3>Number of Players: </h3>
+          <h3>1-5</h3>
+          <br>
+          <h3>Themes: </h3>
+          <h3>Medieval</h3>
+          <br>
+          <h3>Board Game Mechanics: </h3>
+          <h3>Card Driven | Dice Rolling | Hand Management | Set Collection</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id = "mobileReviews">
+    <div class = "outsideBox" onclick="toggleMobileMenu('mobileReviews')">
+      <div class = "insideBox">
+        <div class="section">
+          <h1 class = "sectionHeader">Reviews</h1>
+          <div class="reviewInstance" style="margin-top: 1rem;">
+            <h2 class="reviewName">Harry Potter</h2>
+            <div class = "rating" style="margin-top: 0.5rem;">
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <h3 style="margin-left: 0.5rem;">12/03/22</h3>
+            </div>
+            <h2 class="reviewTitle">Such a great game</h2>
+            <h3>Highly recommend this amazing game. So much fun!</h3>
+          </div>
+          <div class="reviewInstance">
+            <h2 class="reviewName">Charlie Puth</h2>
+            <div class = "rating" style="margin-top: 0.5rem;">
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <i class="fa-solid fa-star star"></i>
+              <h3 style="margin-left: 0.5rem;">15/10/21</h3>
+            </div>
+            <h2 class="reviewTitle">What. A. Game</h2>
+            <h3>This is an absolute must play! My partner and I love playing board games together and are very competitive. Wingspan provides a great amount of competition without being too aggressive. It is a beautiful and addictive board game. We haven't even had the chance to try the one player version yet, because none of us want to miss out on playing!</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <main>
     <div id = "leftSideContent">
       <div id = "product1Imgs">
@@ -147,9 +259,6 @@
           <img src="../assets/Product Images/wingsapn.png" alt="product1" class = "product1SmallImg">
           <img src="../assets/Product Images/wingspan 1.webp" alt="product1" class = "product1SmallImg">
           <img src="../assets/Product Images/wingspan 2.webp" alt="product1" class = "product1SmallImg">
-          <!-- <img src="../assets/Product Images/catan/board2.png" alt="product1" class = "product1SmallImg">
-          <img src="../assets/Product Images/catan/logo.png" alt="product1" class = "product1SmallImg">
-          <img src="../assets/Product Images/catan/board3.png" alt="product1" class = "product1SmallImg"> -->
         </div>
         <img src="../assets/Product Images/wingsapn.png" alt="product1" class = "product1Img">
       </div>
@@ -180,6 +289,15 @@
           <button class="btn" onclick="showPopup('cart')" style="width: 50%; margin-left: 2rem;">Add to Cart</button>
           <i class="fa-solid fa-heart icon" style="margin-left: 5%;"></i>
         </div>
+      </div>
+      <div class = "product1Btn" onclick="toggleMobileMenu('mobileDescription')">
+        <h3>Description</h3>
+      </div>
+      <div class = "product1Btn" onclick="toggleMobileMenu('mobileProductDetails')">
+        <h3>Product Details</h3>
+      </div>
+      <div class = "product1Btn" onclick="toggleMobileMenu('mobileReviews')">
+        <h3>Reviews</h3>
       </div>
     </div>
     <div id = "rightSideContent">
@@ -225,7 +343,6 @@
           <br>
           <h3>Board Game Mechanics: </h3>
           <h3>Card Driven | Dice Rolling | Hand Management | Set Collection</h3>
-            </h3>
         </div>
       </div>
       <div class="section">

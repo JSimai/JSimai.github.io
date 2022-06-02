@@ -14,6 +14,7 @@
 <body>
   <div class="navBack">
     <nav id = "navbar">
+      <i class="fa-bars bars" onclick="toggleMobileMenu('mobileMainMenu')"></i>
       <a href="../index.html"><img src="../assets/ggIcon.webp" alt="GasGamesIcon" class = "ggIcon"></a>
       <div class = "navIconCont">
         <i class="fa-solid fa-magnifying-glass navIcon" onclick="toggleSearch()"></i>
@@ -140,11 +141,40 @@
       </a>
     </div>
   </div>
+  <div id = "mobileMainMenu">
+    <i class="fa-solid fa-xmark mobileXMark" onclick="toggleMobileMenu('mobileMainMenu')"></i>
+    <a class = "mobileBrowseMenu" style="margin-top: 3rem;" onclick="toggleMobileMenu('mobileBrowseMenuScreen')">
+      <h2>Browse</h2>
+      <i class="fa-solid fa-chevron-right arrow"></i>
+    </a>
+    <a href="inspo.html"><h2>Find Inspo</h2></a>
+    <a><h2>Publishers</h2></a>
+    <a><h2>About Us</h2></a>
+    <a><h2>Contact</h2></a>
+  </div>
+  <div id = "mobileBrowseMenuScreen">
+    <i class="fa-solid fa-chevron-left mobileXMark" style="color: rgba(255,255,255,0.3);" onclick="toggleMobileMenu('mobileBrowseMenuScreen')"></i>
+    <a href="browse.html" style="margin-top: 3rem;"><h2>Home</h2></a>
+    <a href="categoryHomes/gamesHome.html"><h2>Games</h2></a>
+    <a href="categoryHomes/puzzlesHome.html"><h2>Puzzles</h2></a>
+    <a href="categoryHomes/RPGHome.html"><h2>RPG</h2></a>
+    <a href="categoryHomes/CCGHome.html"><h2>CCG</h2></a>
+    <a href="categoryHomes/materialsHome.html"><h2>Materials</h2></a>
+    <a href="categoryHomes/collectablesHome.html" style="margin-bottom: 2rem;"><h2>Collectables</h2></a>
+  </div>
   <main>
     <div id="leftSideContent">
       <div class = "cartHeader">
         <h1 class="cartHeaderText">My Cart</h1>
         <h3>Spend $60.00 more and get free shipping!</h3>
+      </div>
+      <div class="mobileCheckoutBtnCont">
+        <a href="checkout.html" class="btn" style="width: 40%;">
+          <h2>Checkout</h2>
+        </a>
+        <div class="cartTotal">
+          <h2>Total: $90.00</h2>
+        </div>
       </div>
       <div class = "cartColumns">
         <h3 class="cartColumn">Product</h3>
@@ -164,13 +194,23 @@
         </div>
         <h2 class = "cartItemTotal">$90.00</h2>
       </div>
+      <div class = "mobileCartOptions">
+        <div class="cartOption">
+          <h2>Order Instructions</h2>
+          <i class="fa-solid fa-chevron-left"></i>
+        </div>
+        <div class="cartOption">
+          <h2>Estimate Shipping</h2>
+          <i class="fa-solid fa-chevron-left"></i>
+        </div>
+      </div>
       <div class = "productBundle">
         <h2 class = "groupTitle">Complete Your Cart</h2>
         <div class = "productGroup">
-          <div class = "product" style="margin-left: 2rem;" >
-            <a href="../product2.html"><img src="../assets/Product Images/wingpsan.png" alt="Catan" class = "productImage"></a>
+          <div class = "productFirst" >
+            <a href="product2.html"><img src="../assets/Product Images/wingpsan.png" alt="Catan" class = "productImage"></a>
             <h2 class = "productCompany">Stonemaier Games</h2>
-            <a href="../product2.html" class="productName"><h2>Wingspan</h2></a>
+            <a href="product2.html" class="productName"><h2>Wingspan</h2></a>
             <div class= "productPriceBundle">
               <h2 class = "productPrice" style="color: #F14C48;">$85.00</h2>
               <div class = "actionIcons">
@@ -184,9 +224,9 @@
             </div>
           </div>
           <div class = "product" >
-            <a href="../product1.html"><img src="../assets/Product Images/arnak.png" alt="Catan" class = "productImage"></a>
+            <a href="product1.html"><img src="../assets/Product Images/arnak.png" alt="Catan" class = "productImage"></a>
             <h2 class = "productCompany">Czech Games</h2>
-            <a href="../product1.html" class="productName"><h2>Lost Ruins of Arnak</h2></a>
+            <a href="product1.html" class="productName"><h2>Lost Ruins of Arnak</h2></a>
             <div class= "productPriceBundle">
               <h2 class = "productPrice">$110.00</h2>
               <div class = "actionIcons">
@@ -196,9 +236,9 @@
             </div>
           </div>
           <div class = "product" >
-            <a href="../product1.html"><img src="../assets/Product Images/dixit.png" alt="Catan" class = "productImage"></a>
+            <a href="product1.html"><img src="../assets/Product Images/dixit.png" alt="Catan" class = "productImage"></a>
             <h2 class = "productCompany">Asmodee</h2>
-            <a href="../product1.html" class="productName"><h2>Dixit</h2></a>
+            <a href="product1.html" class="productName"><h2>Dixit</h2></a>
             <div class= "productPriceBundle">
               <h2 class = "productPrice">$65.00</h2>
               <div class = "actionIcons">
@@ -208,9 +248,9 @@
             </div>
           </div>
           <div class = "product" >
-            <a href="../product1.html"><img src="../assets/Product Images/azul.png" alt="Catan" class = "productImage"></a>
+            <a href="product1.html"><img src="../assets/Product Images/azul.png" alt="Catan" class = "productImage"></a>
             <h2 class = "productCompany">Plan B Games</h2>
-            <a href="../product1.html" class="productName"><h2>Azul</h2></a>
+            <a href="product1.html" class="productName"><h2>Azul</h2></a>
             <div class= "productPriceBundle">
               <h2 class = "productPrice">$75.00</h2>
               <div class = "actionIcons">
@@ -220,9 +260,9 @@
             </div>
           </div>
           <div class = "product" >
-            <a href="../product1.html"><img src="../assets/Product Images/ttrEurope.png" alt="Catan" class = "productImage"></a>
+            <a href="product1.html"><img src="../assets/Product Images/ttrEurope.png" alt="Catan" class = "productImage"></a>
             <h2 class = "productCompany">Days of Wonder</h2>
-            <a href="../product1.html" class="productName"><h2>Ticket to Ride Europe</h2></a>
+            <a href="product1.html" class="productName"><h2>Ticket to Ride Europe</h2></a>
             <div class= "productPriceBundle">
               <h2 class = "productPrice">$80.00</h2>
               <div class = "actionIcons">
@@ -232,9 +272,9 @@
             </div>
           </div>
           <div class = "product" >
-            <a href="../product1.html"><img src="../assets/Product Images/ttrUSA.png" alt="Catan" class = "productImage"></a>
+            <a href="product1.html"><img src="../assets/Product Images/ttrUSA.png" alt="Catan" class = "productImage"></a>
             <h2 class = "productCompany">Days of Wonder</h2>
-            <a href="../product1.html" class="productName"><h2>Ticket to Ride USA</h2></a>
+            <a href="product1.html" class="productName"><h2>Ticket to Ride USA</h2></a>
             <div class= "productPriceBundle">
               <h2 class = "productPrice">$80.00</h2>
               <div class = "actionIcons">
@@ -244,9 +284,9 @@
             </div>
           </div>
           <div class = "product" >
-            <a href="../product1.html"><img src="../assets/Product Images/splendor.png" alt="Catan" class = "productImage"></a>
+            <a href="product1.html"><img src="../assets/Product Images/splendor.png" alt="Catan" class = "productImage"></a>
             <h2 class = "productCompany">Asmodee</h2>
-            <a href="../product1.html" class="productName"><h2>Splendor</h2></a>
+            <a href="product1.html" class="productName"><h2>Splendor</h2></a>
             <div class= "productPriceBundle">
               <h2 class = "productPrice">$80.00</h2>
               <div class = "actionIcons">
@@ -256,9 +296,9 @@
             </div>
           </div>
           <div class = "product" >
-            <a href="../product1.html"><img src="../assets/Product Images/codenames.png" alt="Catan" class = "productImage"></a>
+            <a href="product1.html"><img src="../assets/Product Images/codenames.png" alt="Catan" class = "productImage"></a>
             <h2 class = "productCompany">Czech Games</h2>
-            <a href="../product1.html" class="productName"><h2>Codenames</h2></a>
+            <a href="product1.html" class="productName"><h2>Codenames</h2></a>
             <div class= "productPriceBundle">
               <h2 class = "productPrice">$32.00</h2>
               <div class = "actionIcons">
@@ -268,9 +308,9 @@
             </div>
           </div>
           <div class = "product" >
-            <a href="../product1.html"><img src="../assets/Product Images/explode.png" alt="Catan" class = "productImage"></a>
+            <a href="product1.html"><img src="../assets/Product Images/explode.png" alt="Catan" class = "productImage"></a>
             <h2 class = "productCompany">Exploding Kittens</h2>
-            <a href="../product1.html" class="productName"><h2>Exploding Kittens</h2></a>
+            <a href="product1.html" class="productName"><h2>Exploding Kittens</h2></a>
             <div class= "productPriceBundle">
               <h2 class = "productPrice">$45.00</h2>
               <div class = "actionIcons">

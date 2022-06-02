@@ -2,6 +2,16 @@ body {
   background: #3f3f3f;
 }
 
+.bottomContent {
+  display: flex;
+}
+
+.bottomContent1 {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
 .cartTotal {
   display: flex;
   justify-content: space-between;
@@ -65,12 +75,18 @@ body {
 
 .email {
   color: #EA9F1C;
-  margin-left: 0.3rem;
-  margin-right: 0.3rem;
-  margin-bottom: 1.5rem;
+  /* margin-left: 0.3rem; */
+  margin-right: 0.4rem;
 }
 
 .emailConf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.emailLayout {
   display: flex;
 }
 
@@ -80,6 +96,10 @@ body {
   align-items: center;
   width: 80%;
   margin-bottom: 2rem;
+}
+
+.infoCont h3 {
+  text-align: right;
 }
 
 .infoHeader {
@@ -131,7 +151,42 @@ body {
   display: flex; 
   flex-direction: column;
   align-items: center;
-  margin-top: 3%;
-  padding-bottom: 3%;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
   border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+@media screen and (max-width: 600px) {
+  .bottomContent {
+    display: none;
+  }
+
+  .bottomContent1 {
+    display: flex;
+  }
+
+  .cartTotal {
+    width: 90%;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .checkoutItem {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    width: 90%;
+    margin-top: 2rem;
+  }
+
+  .checkoutItemImage {
+    max-width: 18vw;
+  }
+
+  .infoCont {
+    width: 90%;
+  }
+
+  .shippingCont {
+    width: 90%;
+  }
 }
