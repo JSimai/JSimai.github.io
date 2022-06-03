@@ -1,3 +1,10 @@
+// showPopup();
+// closePopup();
+toggleSearch();
+// toggleMobileMenu();
+
+
+
 function showPopup(id) {
   var popup = document.getElementById(id);
   popup.style.transform = "translateX(0%)";
@@ -8,25 +15,33 @@ function closePopup(id) {
   popup.style.transform = "translateX(200%)";
 }
 
-function toggleSearch() {
+function showSearch() {
   var search = document.getElementById("searchBar");
   var box = document.getElementById("backBox");
-  if (search.style.display === "none") {
-    search.style.display = "flex";
-    box.style.display = "flex";
-  } else {
-    search.style.display = "none";
-    box.style.display = "none";
-  }
+  search.style.display = "flex";
+  box.style.display = "flex";
+}
+
+function closeSearch() {
+  var search = document.getElementById("searchBar");
+  var box = document.getElementById("backBox");
+  search.style.display = "none";
+  box.style.display = "none";
+}
+
+function showMobileMenu (id) {
+  var menu = document.getElementById(id);
+  menu.style.display = "flex";
+}
+
+function closeMobileMenu (id) {
+  var menu = document.getElementById(id);
+  menu.style.display = "none";
 }
 
 function toggleMobileMenu (id) {
   var menu = document.getElementById(id);
-  if (menu.style.display === "none") {
-    menu.style.display = "flex";
-  } else {
-    menu.style.display = "none";
-  }
+  menu.style.display = "none";
 }
 
 function handleForm() {
@@ -43,19 +58,20 @@ function logout() {
   form.style.display = "block";
 }
 
-function select(id, id1) {
+function selectOn(id, id1, id2) {
   var element = document.getElementById(id);
   var element1 = document.getElementById(id1);
-  if (element.style.display === "none") {
+  var element2 = document.getElementById(id2);
   element.style.display = "flex";
-  }
-  else {
-  element.style.display = "none";
-  }
-  if (element1.style.display === "none") {
   element1.style.display = "flex";
-  }
-  else {
+  element2.style.display = "none";
+}
+
+function selectOff(id, id1, id2) {
+  var element = document.getElementById(id);
+  var element1 = document.getElementById(id1);
+  var element2 = document.getElementById(id2);
+  element.style.display = "none";
   element1.style.display = "none";
-  }
+  element2.style.display = "flex";
 }

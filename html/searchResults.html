@@ -14,10 +14,10 @@
 <body>
   <div class="navBack">
     <nav id = "navbar">
-      <i class="fa-bars bars" onclick="toggleMobileMenu('mobileMainMenu')"></i>
+      <i class="fa-bars bars" onclick="showMobileMenu('mobileMainMenu')"></i>
       <a href="../index.html"><img src="../assets/ggIcon.webp" alt="GasGamesIcon" class = "ggIcon"></a>
       <div class = "navIconCont">
-        <i class="fa-solid fa-magnifying-glass navIcon" onclick="toggleSearch()"></i>
+        <i class="fa-solid fa-magnifying-glass navIcon" onclick="showSearch()"></i>
         <i class="fa-solid fa-user-astronaut navIcon" onclick="showPopup('login')"></i>
         <i class="fa-solid fa-cart-shopping navIcon" onclick="showPopup('cart')"></i>
       </div>
@@ -134,7 +134,7 @@
     </div>
   </div>
   <div id= "search">
-    <div id = "backBox" onclick="toggleSearch()"></div>
+    <div id = "backBox" onclick="closeSearch()"></div>
     <div id = "searchBar">
       <input type="text" class="searchInput" placeholder="Search for games...">
       <a href = "searchResults.html" class="searchBtn">
@@ -144,7 +144,7 @@
   </div>
   <div id = "mobileMainMenu">
     <i class="fa-solid fa-xmark mobileXMark" onclick="toggleMobileMenu('mobileMainMenu')"></i>
-    <a class = "mobileBrowseMenu" style="margin-top: 3rem;" onclick="toggleMobileMenu('mobileBrowseMenuScreen')">
+    <a class = "mobileBrowseMenu" style="margin-top: 3rem;" onclick="showMobileMenu('mobileBrowseMenuScreen')">
       <h2>Browse</h2>
       <i class="fa-solid fa-chevron-right arrow"></i>
     </a>
@@ -195,37 +195,72 @@
         <h1 class="sectionHeader">Category</h1>
         <i class="fa-solid fa-chevron-down" style="font-size: 1.2rem; padding-bottom: 0.4rem;"></i>
       </div>
-      <div class="selection" onclick="select('innerBox', 'selectedFilter')">
+      <div id="selection" onclick="selectOn('selectionFull', 'selectedFilter', 'selection')">
+        <div class="boxes">
+          <div class="outerBox"></div>
+          <h2 class="selectionText">Strategy</h2>
+        </div>
+        <h3>(35)</h3>
+      </div>
+      <div id="selectionFull" onclick="selectOff('selectionFull', 'selectedFilter', 'selection')">
         <div class="boxes">
           <div class="outerBox"><div id="innerBox"></div></div>
           <h2 class="selectionText">Strategy</h2>
         </div>
         <h3>(35)</h3>
       </div>
-      <div class="selection" onclick="select('innerBox1', 'selectedFilter1')">
+      <div id="selection1" onclick="selectOn('selectionFull1', 'selectedFilter1', 'selection1')">
         <div class="boxes">
-          <div class="outerBox"><div id="innerBox1"></div></div>
+          <div class="outerBox"></div>
           <h2 class="selectionText">Party</h2>
         </div>
         <h3>(20)</h3>
       </div>
-      <div class="selection" onclick="select('innerBox2', 'selectedFilter2')">
+      <div id="selectionFull1" onclick="selectOff('selectionFull1', 'selectedFilter1', 'selection1')">
         <div class="boxes">
-          <div class="outerBox"><div id="innerBox2"></div></div>
+          <div class="outerBox"><div id="innerBox"></div></div>
+          <h2 class="selectionText">Party</h2>
+        </div>
+        <h3>(20)</h3>
+      </div>
+      <div id="selection2" onclick="selectOn('selectionFull2', 'selectedFilter2', 'selection2')">
+        <div class="boxes">
+          <div class="outerBox"></div>
           <h2 class="selectionText">Family</h2>
         </div>
         <h3>(18)</h3>
       </div>
-      <div class="selection" onclick="select('innerBox3', 'selectedFilter3')">
+      <div id="selectionFull2" onclick="selectOff('selectionFull2', 'selectedFilter2', 'selection2')">
         <div class="boxes">
-          <div class="outerBox"><div id="innerBox3"></div></div>
+          <div class="outerBox"><div id="innerBox"></div></div>
+          <h2 class="selectionText">Family</h2>
+        </div>
+        <h3>(18)</h3>
+      </div>
+      <div id="selection3" onclick="selectOn('selectionFull3', 'selectedFilter3', 'selection3')">
+        <div class="boxes">
+          <div class="outerBox"></div>
           <h2 class="selectionText">Cards</h2>
         </div>
         <h3>(46)</h3>
       </div>
-      <div class="selection" onclick="select('innerBox4', 'selectedFilter4')">
+      <div id="selectionFull3" onclick="selectOff('selectionFull3', 'selectedFilter3', 'selection3')">
         <div class="boxes">
-          <div class="outerBox"><div id="innerBox4"></div></div>
+          <div class="outerBox"><div id="innerBox"></div></div>
+          <h2 class="selectionText">Cards</h2>
+        </div>
+        <h3>(46)</h3>
+      </div>
+      <div id="selection4" onclick="selectOn('selectionFull4', 'selectedFilter4', 'selection4')">
+        <div class="boxes">
+          <div class="outerBox"></div>
+          <h2 class="selectionText">Dice</h2>
+        </div>
+        <h3>(12)</h3>
+      </div>
+      <div id="selectionFull4" onclick="selectOff('selectionFull4', 'selectedFilter4', 'selection4')">
+        <div class="boxes">
+          <div class="outerBox"><div id="innerBox"></div></div>
           <h2 class="selectionText">Dice</h2>
         </div>
         <h3>(12)</h3>
@@ -282,23 +317,23 @@
           <div class="sectionHeaderCont">
             <h1 class="sectionHeader" style="margin-bottom: 0.5rem;">Filter By</h1>
           </div>
-          <div id="selectedFilter">
+          <div id="selectedFilter5">
             <h3>Strategy</h3>
             <i class="fa-solid fa-xmark" style="font-size: 1.2rem;"></i>
           </div>
-          <div id="selectedFilter1">
+          <div id="selectedFilter6">
             <h3>Party</h3>
             <i class="fa-solid fa-xmark" style="font-size: 1.2rem;"></i>
           </div>
-          <div id="selectedFilter2">
+          <div id="selectedFilter7">
             <h3>Family</h3>
             <i class="fa-solid fa-xmark" style="font-size: 1.2rem;"></i>
           </div>
-          <div id="selectedFilter3">
+          <div id="selectedFilter8">
             <h3>Cards</h3>
             <i class="fa-solid fa-xmark" style="font-size: 1.2rem;"></i>
           </div>
-          <div id="selectedFilter4">
+          <div id="selectedFilter9">
             <h3>Dice</h3>
             <i class="fa-solid fa-xmark" style="font-size: 1.2rem;"></i>
           </div>
@@ -308,37 +343,72 @@
             <h1 class="sectionHeader">Category</h1>
             <i class="fa-solid fa-chevron-down" style="font-size: 1.2rem; padding-bottom: 0.4rem;"></i>
           </div>
-          <div class="selection" onclick="select('innerBox', 'selectedFilter')">
+          <div id="selection5" onclick="selectOn('selectionFull5', 'selectedFilter5', 'selection5')">
+            <div class="boxes">
+              <div class="outerBox"></div>
+              <h2 class="selectionText">Strategy</h2>
+            </div>
+            <h3>(35)</h3>
+          </div>
+          <div id="selectionFull5" onclick="selectOff('selectionFull5', 'selectedFilter5', 'selection5')">
             <div class="boxes">
               <div class="outerBox"><div id="innerBox"></div></div>
               <h2 class="selectionText">Strategy</h2>
             </div>
             <h3>(35)</h3>
           </div>
-          <div class="selection" onclick="select('innerBox1', 'selectedFilter1')">
+          <div id="selection6" onclick="selectOn('selectionFull6', 'selectedFilter6', 'selection6')">
             <div class="boxes">
-              <div class="outerBox"><div id="innerBox1"></div></div>
+              <div class="outerBox"></div>
               <h2 class="selectionText">Party</h2>
             </div>
             <h3>(20)</h3>
           </div>
-          <div class="selection" onclick="select('innerBox2', 'selectedFilter2')">
+          <div id="selectionFull6" onclick="selectOff('selectionFull6', 'selectedFilter6', 'selection6')">
             <div class="boxes">
-              <div class="outerBox"><div id="innerBox2"></div></div>
+              <div class="outerBox"><div id="innerBox"></div></div>
+              <h2 class="selectionText">Party</h2>
+            </div>
+            <h3>(20)</h3>
+          </div>
+          <div id="selection7" onclick="selectOn('selectionFull7', 'selectedFilter7', 'selection7')">
+            <div class="boxes">
+              <div class="outerBox"></div>
               <h2 class="selectionText">Family</h2>
             </div>
             <h3>(18)</h3>
           </div>
-          <div class="selection" onclick="select('innerBox3', 'selectedFilter3')">
+          <div id="selectionFull7" onclick="selectOff('selectionFull7', 'selectedFilter7', 'selection7')">
             <div class="boxes">
-              <div class="outerBox"><div id="innerBox3"></div></div>
+              <div class="outerBox"><div id="innerBox"></div></div>
+              <h2 class="selectionText">Family</h2>
+            </div>
+            <h3>(18)</h3>
+          </div>
+          <div id="selection8" onclick="selectOn('selectionFull8', 'selectedFilter8', 'selection8')">
+            <div class="boxes">
+              <div class="outerBox"></div>
               <h2 class="selectionText">Cards</h2>
             </div>
             <h3>(46)</h3>
           </div>
-          <div class="selection" onclick="select('innerBox4', 'selectedFilter4')">
+          <div id="selectionFull8" onclick="selectOff('selectionFull8', 'selectedFilter8', 'selection8')">
             <div class="boxes">
-              <div class="outerBox"><div id="innerBox4"></div></div>
+              <div class="outerBox"><div id="innerBox"></div></div>
+              <h2 class="selectionText">Cards</h2>
+            </div>
+            <h3>(46)</h3>
+          </div>
+          <div id="selection9" onclick="selectOn('selectionFull9', 'selectedFilter9', 'selection9')">
+            <div class="boxes">
+              <div class="outerBox"></div>
+              <h2 class="selectionText">Dice</h2>
+            </div>
+            <h3>(12)</h3>
+          </div>
+          <div id="selectionFull9" onclick="selectOff('selectionFull9', 'selectedFilter9', 'selection9')">
+            <div class="boxes">
+              <div class="outerBox"><div id="innerBox"></div></div>
               <h2 class="selectionText">Dice</h2>
             </div>
             <h3>(12)</h3>
@@ -392,7 +462,7 @@
       <div class="pageHeaderCont">
         <h1 class = "pageHeader">Search Results</h1>
         <div class = "gridOptions">
-          <div class = "filterSelect" onclick="toggleMobileMenu('filterMenu')">
+          <div class = "filterSelect" onclick="showMobileMenu('filterMenu')">
             <h2>Filters</h2>
             <i class="fa-solid fa-filter arrow"></i>
           </div>

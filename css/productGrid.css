@@ -62,7 +62,7 @@ main {
   border-radius: 0.2rem;
 }
 
-#innerBox1 {
+/* #innerBox1 {
   display: none;
   background-color: #EA9F1C;
   width: 1rem;
@@ -89,7 +89,7 @@ main {
   width: 1rem;
   height: 1rem;
   border-radius: 0.2rem;
-}
+} */
 
 #leftSideContent {
   overflow-y: scroll;
@@ -253,15 +253,225 @@ main {
   justify-content: space-between;
   margin-bottom: 0.3rem;
 }
+#selectedFilter5 {
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: space-between;
+  margin-bottom: 0.3rem;
+}
+#selectedFilter6 {
+  display: none;
+  align-items: center;
+  color: white;
+  justify-content: space-between;
+  margin-bottom: 0.3rem;
+}
+#selectedFilter7 {
+  display: none;
+  align-items: center;
+  color: white;
+  justify-content: space-between;
+  margin-bottom: 0.3rem;
+}
+#selectedFilter8 {
+  display: none;
+  align-items: center;
+  color: white;
+  justify-content: space-between;
+  margin-bottom: 0.3rem;
+}
+#selectedFilter9 {
+  display: none;
+  align-items: center;
+  color: white;
+  justify-content: space-between;
+  margin-bottom: 0.3rem;
+}
 
-.selection {
+#selection {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.7rem;
+}
+
+#selection1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.7rem;
+}
+#selection2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.7rem;
+}
+#selection3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.7rem;
+}
+#selection4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.7rem;
+}
+#selection5 {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.7rem;
+}
+#selection6 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.7rem;
+}
+#selection7 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.7rem;
+}
+#selection8 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.7rem;
+}
+#selection9 {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 0.7rem;
 }
 
-.selection:hover {
+#selection:hover {
+  cursor: pointer;
+}
+#selection1:hover {
+  cursor: pointer;
+}
+#selection2:hover {
+  cursor: pointer;
+}
+#selection3:hover {
+  cursor: pointer;
+}
+#selection4:hover {
+  cursor: pointer;
+}
+#selection5:hover {
+  cursor: pointer;
+}
+#selection6:hover {
+  cursor: pointer;
+}
+#selection7:hover {
+  cursor: pointer;
+}
+#selection8:hover {
+  cursor: pointer;
+}
+#selection9:hover {
+  cursor: pointer;
+}
+
+#selectionFull {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.7rem;
+}
+
+#selectionFull1 {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.7rem;
+}
+#selectionFull2 {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.7rem;
+}
+#selectionFull3 {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.7rem;
+}
+#selectionFull4 {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.7rem;
+}
+#selectionFull5 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.7rem;
+}
+#selectionFull6 {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.7rem;
+}
+#selectionFull7 {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.7rem;
+}
+#selectionFull8 {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.7rem;
+}
+#selectionFull9 {
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.7rem;
+}
+
+#selectionFull:hover {
+  cursor: pointer;
+}
+#selectionFull1:hover {
+  cursor: pointer;
+}
+#selectionFull2:hover {
+  cursor: pointer;
+}
+#selectionFull3:hover {
+  cursor: pointer;
+}
+#selectionFull4:hover {
+  cursor: pointer;
+}
+#selectionFull5:hover {
+  cursor: pointer;
+}
+#selectionFull6:hover {
+  cursor: pointer;
+}
+#selectionFull7:hover {
+  cursor: pointer;
+}
+#selectionFull8:hover {
+  cursor: pointer;
+}
+#selectionFull9:hover {
   cursor: pointer;
 }
 

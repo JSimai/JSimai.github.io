@@ -14,10 +14,10 @@
 <body>
   <div class="navBack">
     <nav id = "navbar">
-      <i class="fa-bars bars" onclick="toggleMobileMenu('mobileMainMenu')"></i>
+      <i class="fa-bars bars" onclick="showMobileMenu('mobileMainMenu')"></i>
       <a href="../../index.html"><img src="../../assets/ggIcon.webp" alt="GasGamesIcon" class = "ggIcon"></a>
       <div class = "navIconCont">
-        <i class="fa-solid fa-magnifying-glass navIcon" onclick="toggleSearch()"></i>
+        <i class="fa-solid fa-magnifying-glass navIcon" onclick="showSearch()"></i>
         <i class="fa-solid fa-user-astronaut navIcon" onclick="showPopup('login')"></i>
         <i class="fa-solid fa-cart-shopping navIcon" onclick="showPopup('cart')"></i>
       </div>
@@ -133,7 +133,7 @@
     </div>
   </div>
   <div id= "search">
-    <div id = "backBox" onclick="toggleSearch()"></div>
+    <div id = "backBox" onclick="closeSearch()"></div>
     <div id = "searchBar">
       <input type="text" class="searchInput" placeholder="Search for games...">
       <a href = "searchResults.html" class="searchBtn">
@@ -143,7 +143,7 @@
   </div>
   <div id = "mobileMainMenu">
     <i class="fa-solid fa-xmark mobileXMark" onclick="toggleMobileMenu('mobileMainMenu')"></i>
-    <a class = "mobileBrowseMenu" style="margin-top: 3rem;" onclick="toggleMobileMenu('mobileBrowseMenuScreen')">
+    <a class = "mobileBrowseMenu" style="margin-top: 3rem;" onclick="showMobileMenu('mobileBrowseMenuScreen')">
       <h2>Browse</h2>
       <i class="fa-solid fa-chevron-right arrow"></i>
     </a>
@@ -290,13 +290,13 @@
           <i class="fa-solid fa-heart icon" style="margin-left: 5%;"></i>
         </div>
       </div>
-      <div class = "product1Btn" onclick="toggleMobileMenu('mobileDescription')">
+      <div class = "product1Btn" onclick="showMobileMenu('mobileDescription')">
         <h3>Description</h3>
       </div>
-      <div class = "product1Btn" onclick="toggleMobileMenu('mobileProductDetails')">
+      <div class = "product1Btn" onclick="showMobileMenu('mobileProductDetails')">
         <h3>Product Details</h3>
       </div>
-      <div class = "product1Btn" onclick="toggleMobileMenu('mobileReviews')">
+      <div class = "product1Btn" onclick="showMobileMenu('mobileReviews')">
         <h3>Reviews</h3>
       </div>
     </div>
